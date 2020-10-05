@@ -47,6 +47,6 @@ public class member_login extends HttpServlet {
 		} else {
 			System.out.println("로그인 실패");
 		}
-		response.sendRedirect("neos-master/index.jsp");
+		response.sendRedirect("aroma-master/index.jsp");
 	}
 }

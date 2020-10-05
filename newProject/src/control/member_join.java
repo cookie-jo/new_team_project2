@@ -39,9 +39,9 @@ public class member_join extends HttpServlet {
 		
 		// 성공, 실패
 		if (cnt > 0) {
-			response.sendRedirect("neos-master/index.jsp");
+			response.sendRedirect("aroma-master/index.jsp");
 		} else {
-			response.sendRedirect("neos-master/index.jsp");
+			response.sendRedirect("aroma-master/index.jsp");
 		}
 	}
 }
