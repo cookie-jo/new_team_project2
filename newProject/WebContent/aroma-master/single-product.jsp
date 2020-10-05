@@ -1,3 +1,6 @@
+<%@page import="model.productVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="model.productDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -103,8 +106,15 @@
 				<div class="col-lg-6">
 					<div class="owl-carousel owl-theme s_Product_carousel">
 						<div class="single-prd-item">
-						<% %>
-							<img class="img-fluid" src="img/category/s-p1.jpg" alt=""> <!--사진이미지 -->
+						<% 
+						//get방식으로 받아온 데이터 변수에 저장
+							request.setCharacterEncoding("UTF-8");
+							String img = request.getParameter("img");
+							String name = request.getParameter("name");
+							String price = request.getParameter("price");
+						%>
+						
+							<img class="img-fluid" src="<%=img %>" alt=""> <!--이미지-->
 						</div>
 						<!-- <div class="single-prd-item">
 							<img class="img-fluid" src="img/category/s-p1.jpg" alt="">
@@ -116,10 +126,11 @@
 				</div>
 				<div class="col-lg-5 offset-lg-1">
 					<div class="s_product_text">
-					<% %>
-						<h3>Faded SkyBlu Denim Jeans</h3> <!--내용 바뀌어야됨-->
-					<% %>	
-						<h2>$149.99</h2> <!--가격도 바뀌어야됨-->
+					
+						<h3><%=name %></h3> <!--내용 get방식 한글인코딩 필요-->
+						
+						<h2><%=price %></h2> <!--가격-->
+						
 						<ul class="list">
 							<li><a class="active" href="#"><span>Category</span> : Household</a></li>
 							<li><a href="#"><span>Availibility</span> : In Stock</a></li>

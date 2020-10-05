@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Set;
 
 public class productDAO {
 
@@ -51,7 +52,7 @@ public class productDAO {
 		}
 	}
 
-	// 회원 회원가입
+	// 상품목록보기
 	public ArrayList<productVO> productSelect() {
 		ArrayList<productVO> list = new ArrayList<productVO>();
 		conn();
@@ -80,9 +81,6 @@ public class productDAO {
 		}
 		return list;
 	}
-	
-	
-	
 	
 	
 }

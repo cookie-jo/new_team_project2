@@ -202,6 +202,7 @@
             productDAO dao = new productDAO();
            	ArrayList<productVO> list = dao.productSelect();
             
+           	/*여기서 값을 넘겨주는 것*/
            	/*개수가 넘어갈 때면 페이징도 추가해줘야함.*/
             for(int i = 0; i<9; i++){ 
             
@@ -209,7 +210,7 @@
               <div class="col-md-6 col-lg-4">
                 <div class="card text-center card-product">
                   <div class="card-product__img">
-                    <img class="card-img" src="<%=list.get(i).getPd_img() %>" alt=""> <!--여기도 스크립틀릿써서 가능함 css로 크기 조정도 가능-->
+                    <img class="card-img" src="<%=list.get(i).getPd_img() %>" alt=""> <!--css로 이미지 크기 틀에 맞추는 작업 필요-->
                     <ul class="card-product__imgOverlay">
                       <li><button><i class="ti-search"></i></button></li>
                       <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -218,8 +219,9 @@
                   </div>
                   <div class="card-body">
                     <p>Accessories</p> <!--이건 분류인데 일단 두자-->
-                    <!--여기서 이름 클릭했을 때 해당 페이지에 넘겨줘야하니까 어떻게 만들어줘야 잘 만들었다고 소문이날까???-->
-                    <h4 class="card-product__title"><a href="single-product.jsp"><%=list.get(i).getPd_name() %></a></h4> <!--제품명-->
+                    
+                    <!--쿼리스트링으로 이미지, 상품명, 가격 넘기는 코드-->
+                    <h4 class="card-product__title"><a href="single-product.jsp?img=<%=list.get(i).getPd_img()%>&name=<%=list.get(i).getPd_name()%>&price=<%=list.get(i).getPd_price()%>"><%=list.get(i).getPd_name() %></a></h4> <!--제품명-->
                     <p class="card-product__price"><%=list.get(i).getPd_price() %></p> <!--가격-->
                   </div>
                 </div>
