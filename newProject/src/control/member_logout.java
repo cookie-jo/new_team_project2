@@ -19,6 +19,6 @@ public class member_logout extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.removeAttribute("name");
 		
-		response.sendRedirect("neos-master/index.jsp");
+		response.sendRedirect("aroma-master/index.jsp");
 	}
 }
