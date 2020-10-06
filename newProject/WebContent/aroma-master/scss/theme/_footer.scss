@@ -3,8 +3,8 @@
 	background: #002347;
 	padding: 50px 0px 50px;
 
-	@media(min-width: 1000px){
-		padding: 195px 0px 120px;
+	@media(min-width: 800px){
+		padding: 20px 0px 0px;  // footer padding 값 수정
 	}
 }
 .single-footer-widget {
@@ -89,7 +89,7 @@
 }
 .footer-bottom {
 	background: rgba(0, 35, 71, 0.9803921568627451);
-	padding: 32px;
+	padding: 15px;     // footer padding값 수정
 	.footer-text {
 		color: #fff;
 		margin-bottom: 0;
