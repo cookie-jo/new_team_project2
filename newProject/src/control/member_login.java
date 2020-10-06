@@ -1,6 +1,12 @@
 package control;
 
 import java.io.IOException;
+import java.net.URLEncoder;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,6 +17,7 @@ import javax.servlet.http.HttpSession;
 
 import model.memberDAO;
 import model.memberVO;
+
 
 @WebServlet("/member_login")
 public class member_login extends HttpServlet {
@@ -38,6 +45,7 @@ public class member_login extends HttpServlet {
 			
 			HttpSession session = request.getSession();
 			session.setAttribute("name", name);
+			session.setAttribute("id", id);
 		} else {
 			System.out.println("로그인 실패");
 		}

@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import model.managerDAO;
 import model.managerVO;
 
+
 @WebServlet("/manager_login")
 public class manager_login extends HttpServlet {
 	private static final long serialVersionUID = 1L;

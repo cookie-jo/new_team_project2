@@ -1,6 +1,10 @@
 package control;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import model.memberDAO;
 import model.memberVO;
+
 
 @WebServlet("/member_join")
 public class member_join extends HttpServlet {
@@ -35,9 +40,10 @@ public class member_join extends HttpServlet {
 		
 		// 성공, 실패
 		if (cnt > 0) {
-			response.sendRedirect("aroma-master/index.jsp");
+			System.out.println("성공");
 		} else {
-			response.sendRedirect("aroma-master/index.jsp");
+			System.out.println("실패");
 		}
+		response.sendRedirect("aroma-master/index.jsp");
 	}
 }

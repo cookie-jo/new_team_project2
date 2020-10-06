@@ -1,8 +1,5 @@
-<%@page import="model.productVO"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="model.productDAO"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,40 +18,6 @@
   <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
 
   <link rel="stylesheet" href="css/style.css">
-  
-  <!---------------------------제품 페이징 버튼 CSS 효과  --------------------------->
- <style type="text/css">
-  	.custom-pagination span, .custom-pagination a {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center; }
-
-.custom-pagination .current {
-  background: #e6e6e6;
-  border-radius: 50%;
-  font-weight: bold; }
-
-.custom-pagination a {
-  border-radius: 100%;
-  background-color: transparent; }
-  .custom-pagination a:hover {
-    background: #71bc42;
-    color: #fff; }
-  	
-  	
-/* body{
-    text-align:center;
-} */
-#paging{
-    font-size: 22pt;
-}
-
-
-  </style>
-  
-<!---------------------------제품 페이징 버튼 CSS 효과  ---------------------------> 
 </head>
 <body>
   <!--================ Start Header Menu Area =================-->
@@ -231,21 +194,10 @@
           <!-- Start Best Seller -->
           <section class="lattest-product-area pb-40 category-list">
             <div class="row">
-            
-            <% 
-	            //productDAO 객체생성
-	            productDAO dao = new productDAO();
-	           	ArrayList<productVO> list = dao.productSelect();
-            	
-           	/*여기서 값을 넘겨주는 것*/
-           	/*개수가 넘어갈 때면 페이징도 추가해줘야함.*/
-            for(int i = 0; i<9; i++){ 
-            	
-            %>
               <div class="col-md-6 col-lg-4">
                 <div class="card text-center card-product">
                   <div class="card-product__img">
-                    <img class="card-img" src="<%=list.get(i).getPd_img() %>" alt=""> <!--css로 이미지 크기 틀에 맞추는 작업 필요-->
+                    <img class="card-img" src="img/product/product1.png" alt=""> 
                     <ul class="card-product__imgOverlay">
                       <li><button><i class="ti-search"></i></button></li>
                       <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -253,67 +205,148 @@
                     </ul>
                   </div>
                   <div class="card-body">
-                    <p>Accessories</p> <!--이건 제품분류인데 일단 두자-->
-                    
-                    <!--쿼리스트링으로 이미지, 상품명, 가격 넘기는 코드 a태그로 넘기면 무조건 get방식으로 넘어감.-->
-                    <h4 class="card-product__title"><a href="single-product.jsp?img=<%=list.get(i).getPd_img()%>&name=<%=list.get(i).getPd_name()%>&price=<%=list.get(i).getPd_price()%>"><%=list.get(i).getPd_name() %></a></h4> <!--제품명-->
-                    <p class="card-product__price"><%=list.get(i).getPd_price() %></p> <!--가격-->
+                    <p>Accessories</p>
+                    <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
+                    <p class="card-product__price">$150.00</p>
                   </div>
                 </div>
               </div>
-              <%
-           		}
-              %>
-              
-         <!-------페이징------->    
-
-		<!-------페이징------->
-
-
-              <!--제품이 9개가 넘으면 다음 페이지로 넘어가야한다-->
-
-              
-              <!--이것은 우선 게시글 수 만큼 page번호가 존재해야함. list.size()가 109니까  그걸 9로 나누면 페이지수가 나옴  -->
-         <!---------------------제품 페이징 버튼 ----------------->
-          <div class="col-12 text-center">
-            <div class="custom-pagination">
-              <span class="current">1</span>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a href="#">4</a>
-              <a href="#">5</a>	
-              	
-              	
-         <!----------------------------------   페이징 부분      -------------------------------------->
-              <div id="paging">
-			<!-- 1~10까지 있는 페이지의 페이징 -->
-				<c:url var="action" value="/ProductList.do"/>
-				<c:if test="${param.prev}">
-				
-				    <a href="${action}?page=${param.beginPage-1}">prev</a>
-				    
-				</c:if>
-				<c:forEach begin="${param.beginPage}" end="${param.endPage}" step="1" var="index">
-				    <c:choose>
-				        <c:when test="${param.page==index}">
-				            ${index}
-				        </c:when>
-				        <c:otherwise>
-				        
-				            <a href="${action}?page=${index}">${index}</a>
-				            
-				        </c:otherwise>
-				    </c:choose>
-				</c:forEach>
-				<c:if test="${param.next}">
-				    <a href="${action}?page=${param.endPage+1}">next</a>
-			</c:if>
-            </div>
-            <!----------------------------------   페이징 부분      -------------------------------------->
-            
-          </div>
-        <!---------------------제품 페이징 버튼 ----------------->
-              
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="img/product/product2.png" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-search"></i></button></li>
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>Beauty</p>
+                    <h4 class="card-product__title"><a href="single-product.html">Women Freshwash</a></h4>
+                    <p class="card-product__price">$150.00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="img/product/product3.png" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-search"></i></button></li>
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>Decor</p>
+                    <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+                    <p class="card-product__price">$150.00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="img/product/product4.png" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-search"></i></button></li>
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>Decor</p>
+                    <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
+                    <p class="card-product__price">$150.00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="img/product/product5.png" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-search"></i></button></li>
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>Accessories</p>
+                    <h4 class="card-product__title"><a href="single-product.html">Man Office Bag</a></h4>
+                    <p class="card-product__price">$150.00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="img/product/product6.png" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-search"></i></button></li>
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>Kids Toy</p>
+                    <h4 class="card-product__title"><a href="single-product.html">Charging Car</a></h4>
+                    <p class="card-product__price">$150.00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="img/product/product7.png" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-search"></i></button></li>
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>Accessories</p>
+                    <h4 class="card-product__title"><a href="single-product.html">Blutooth Speaker</a></h4>
+                    <p class="card-product__price">$150.00</p>
+                  </div> 
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="img/product/product8.png" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-search"></i></button></li>
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>Kids Toy</p>
+                    <h4 class="card-product__title"><a href="single-product.html">Charging Car</a></h4>
+                    <p class="card-product__price">$150.00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="img/product/product1.png" alt="">
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-search"></i></button></li>
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>Accessories</p>
+                    <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
+                    <p class="card-product__price">$150.00</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
           <!-- End Best Seller -->
@@ -324,7 +357,6 @@
 	<!-- ================ category section end ================= -->		  
 
 	<!-- ================ top product area start ================= -->	
-	<%--  베스트 상품 인데 일단 주석처리
 	<section class="related-product-area">
 		<div class="container">
 			<div class="section-intro pb-60px">
@@ -332,10 +364,6 @@
         <h2>Top <span class="section-intro__style">Product</span></h2>
       </div>
 			<div class="row mt-30">
-		
-		<%
-			for(int i = 0; i <4; i++){
-		%>	
         <div class="col-sm-6 col-xl-3 mb-4 mb-xl-0">
           <div class="single-search-product-wrapper">
             <div class="single-search-product d-flex">
@@ -361,13 +389,87 @@
             </div>
           </div>
         </div>
-		<%
-			}
-		%>      
-		</div>
-		</div>
-	</section> --%>
 
+        <div class="col-sm-6 col-xl-3 mb-4 mb-xl-0">
+          <div class="single-search-product-wrapper">
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-4.png" alt=""></a>
+              <div class="desc">
+                  <a href="#" class="title">Gray Coffee Cup</a>
+                  <div class="price">$170.00</div>
+              </div>
+            </div>
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-5.png" alt=""></a>
+              <div class="desc">
+                <a href="#" class="title">Gray Coffee Cup</a>
+                <div class="price">$170.00</div>
+              </div>
+            </div>
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-6.png" alt=""></a>
+              <div class="desc">
+                <a href="#" class="title">Gray Coffee Cup</a>
+                <div class="price">$170.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-xl-3 mb-4 mb-xl-0">
+          <div class="single-search-product-wrapper">
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-7.png" alt=""></a>
+              <div class="desc">
+                  <a href="#" class="title">Gray Coffee Cup</a>
+                  <div class="price">$170.00</div>
+              </div>
+            </div>
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-8.png" alt=""></a>
+              <div class="desc">
+                <a href="#" class="title">Gray Coffee Cup</a>
+                <div class="price">$170.00</div>
+              </div>
+            </div>
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-9.png" alt=""></a>
+              <div class="desc">
+                <a href="#" class="title">Gray Coffee Cup</a>
+                <div class="price">$170.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-xl-3 mb-4 mb-xl-0">
+          <div class="single-search-product-wrapper">
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-1.png" alt=""></a>
+              <div class="desc">
+                  <a href="#" class="title">Gray Coffee Cup</a>
+                  <div class="price">$170.00</div>
+              </div>
+            </div>
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-2.png" alt=""></a>
+              <div class="desc">
+                <a href="#" class="title">Gray Coffee Cup</a>
+                <div class="price">$170.00</div>
+              </div>
+            </div>
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-3.png" alt=""></a>
+              <div class="desc">
+                <a href="#" class="title">Gray Coffee Cup</a>
+                <div class="price">$170.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+		</div>
+	</section>
 	<!-- ================ top product area end ================= -->		
 
 	<!-- ================ Subscribe section start ================= -->		  
