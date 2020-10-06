@@ -9,10 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.model.managerDAO;
-import com.model.managerVO;
-import com.model.memberDAO;
-import com.model.memberVO;
+import model.managerDAO;
+import model.managerVO;
 
 @WebServlet("/manager_login")
 public class manager_login extends HttpServlet {

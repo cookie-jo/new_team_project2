@@ -364,6 +364,7 @@
 								</div>
 								<div class="col-6">
 									<div class="rating_list">
+									<!--별점주는 곳 -->
 										<h3>Based on 3 Reviews</h3>
 										<ul class="list">
 											<li><a href="#">5 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i

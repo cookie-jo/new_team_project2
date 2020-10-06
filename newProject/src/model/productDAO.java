@@ -69,8 +69,43 @@ public class productDAO {
 				String pd_name = rs.getString(3);
 				String pd_price = rs.getString(4);
 				String pd_content = rs.getString(5);
-				productVO vo1 = new productVO(pd_num, pd_img, pd_name, pd_price, pd_content);
-				list.add(vo1);
+				productVO vo = new productVO(pd_num, pd_img, pd_name, pd_price, pd_content);
+				list.add(vo);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return list;
+	}
+	
+	//클라이언트가 요청한 페이지의 내용만 표시하는 메소드
+	public ArrayList<productVO> productPaging(int page) {
+		//1번 페이지 1~10
+		//2번 페이지 11~20
+		int startNum = (page-1)*10+1;
+		int endNum = page*10;
+		ArrayList<productVO> list = new ArrayList<productVO>();
+
+		try {
+			conn();
+			String sql = "select * from (select * from product where pd_num >=? ) where pd_num <= ?;";
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, startNum);
+			psmt.setInt(2, endNum);
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				int pd_num = rs.getInt(1);
+				String pd_img = rs.getString(2);
+				String pd_name = rs.getString(3);
+				String pd_price = rs.getString(4);
+				String pd_content = rs.getString(5);
+				productVO vo = new productVO(pd_num, pd_img, pd_name, pd_price, pd_content);
+				list.add(vo);
 			}
 			
 		} catch (SQLException e) {
