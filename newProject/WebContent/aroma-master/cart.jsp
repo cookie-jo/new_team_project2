@@ -18,6 +18,15 @@
   <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
 
   <link rel="stylesheet" href="css/style.css">
+  
+<!--사진 크기 조절하는 css-->  
+<style>
+.d-flex > img{
+    max-width: 100px;
+}
+</style>
+
+
 </head>
 <body>
   <!--================ Start Header Menu Area =================-->
@@ -100,7 +109,10 @@
 		request.setCharacterEncoding("UTF-8");
 		String img1 = request.getParameter("img");
 		String name1 = request.getParameter("name");
-		String price1 = request.getParameter("price");
+		int price1 = Integer.parseInt(request.getParameter("price"));
+		int number1 = Integer.parseInt(request.getParameter("qty"));
+		System.out.println(number1);
+		
 	%>  
 
   <!--================Cart Area =================-->
@@ -122,6 +134,7 @@
                       	<!--여기서 -->
                           <tr>
                               <td>
+                              
                                   <div class="media">
                                       <div class="d-flex">
                                           <img src=<%=img1 %> alt="">
@@ -130,26 +143,28 @@
                                           <p><%=name1 %></p>
                                       </div>
                                   </div>
+                                  
                               </td>
                               <td>
                                   <h5><%=price1 %></h5>
                               </td>
                               <td>
-                                  <div class="product_count">
+                                  <!-- <div class="product_count">
                                       <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
                                           class="input-text qty">
                                       <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
                                           class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
                                       <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
                                           class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
-                                  </div>
+                                  </div> -->
+                                  <h5><%=number1 %></h5>
                               </td>
                               <td>
-                                  <h5><%=Integer.parseInt(price1) * 2  %></h5>
+                                  <h5><%=price1 * number1 %></h5>
                               </td>
                           </tr>
-                          
-                          <!--<tr>
+                          <!-- 이부분은 더미 상품목록이라서 주석처리 -->
+                          <!--<tr>  
                               <td>
                                    <div class="media">
                                       <div class="d-flex">

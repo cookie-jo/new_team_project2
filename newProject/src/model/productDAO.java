@@ -117,5 +117,30 @@ public class productDAO {
 		return list;
 	}
 	
-	
+	public ArrayList<productVO> productInsert(productVO vo) {
+		ArrayList<productVO> list = new ArrayList<productVO>();
+		conn();
+
+		try {
+			String sql = "insert into product values(?,?,?,?,?);";
+
+			psmt = conn.prepareStatement(sql);
+
+			psmt.executeUpdate();
+			psmt.setInt(1, vo.getPd_num());//번호
+			psmt.setString(2, vo.getPd_img());//이미지
+			psmt.setString(3, vo.getPd_name());//이름
+			psmt.setString(4, vo.getPd_price());//가격
+			psmt.setString(5, vo.getPd_content());//수량
+			
+			cnt = psmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return list;
+	}
 }
