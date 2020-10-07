@@ -21,6 +21,20 @@
 <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
 
 <link rel="stylesheet" href="css/style.css">
+<script type="text/javascript">
+   function cart(){
+	   document.frm.submit();
+   }
+</script>
+<style type="text/css">
+
+.single-prd-item > img{
+    width: 550px;
+    height: 550px;
+}
+</style>
+
+
 </head>
 <body>
 	<!--================ Start Header Menu Area =================-->
@@ -115,6 +129,7 @@
 
 
 	<!--================Single Product Area =================-->
+	
 	<div class="product_image_area">
 		<div class="container">
 			<div class="row s_product_inner">
@@ -124,12 +139,12 @@
 							<%
 								//get방식으로 받아온 데이터 변수에 저장
 							request.setCharacterEncoding("UTF-8");
-							String img = request.getParameter("img");
-							String name = request.getParameter("name");
-							String price = request.getParameter("price");
+							String img1 = request.getParameter("img");
+							String name1 = request.getParameter("name");
+							String price1 = request.getParameter("price");
 							%>
 
-							<img class="img-fluid" src="<%=img%>" alt="">
+							<img class="img-fluid" src="<%=img1%>" alt="">
 							<!--이미지-->
 						</div>
 						<!-- <div class="single-prd-item">
@@ -143,10 +158,10 @@
 				<div class="col-lg-5 offset-lg-1">
 					<div class="s_product_text">
 
-						<h3><%=name%></h3>
+						<h3><%=name1%></h3>
 						<!--내용 get방식 한글인코딩 필요-->
 
-						<h2><%=price%></h2>
+						<h2><%=price1%></h2>
 						<!--가격-->
 
 						<ul class="list">
@@ -165,14 +180,22 @@
 								class="increase items-count" type="button">
 								<i class="ti-angle-left"></i>
 							</button>
-							<input type="text" name="qty" id="sst" size="2" maxlength="12"
+							<!--form 형태로 값을 넘겨주는 부분. type = hidden 쓰면 안보이면서 form태그로 감싸서 자바스크립트로 frm함수 만들어서 값을 넘겨주는게 가능-->
+							<form name="frm" action ="cart.jsp" method = "post">
+							<input type="hidden" name="img" value="<%=img1%>"/>
+							<input type="hidden" name="name" value="<%=name1%>"/>
+							<input type="hidden" name="price" value="<%=price1%>"/>
+							<input type="number" min="1" max="100" name="qty" id="sst" size="2" maxlength="12"
 								value="1" title="Quantity:" class="input-text qty">
+							<!--숫자 입력 안하고 넘기면 에러뜸..-->
 							<button
 								onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
 								class="reduced items-count" type="button">
 								<i class="ti-angle-right"></i>
 							</button>
-							<a class="button primary-btn" href="#">Add to Cart</a>
+							<!--jsp 이미지 상품명 가격 (수량)))) cart.jsp로 넘기는 부분--> 
+							<a class="button primary-btn" onclick="cart()">Add to Cart</a>
+							</form>
 						</div>
 						<div class="card_area d-flex align-items-center">
 							<a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>

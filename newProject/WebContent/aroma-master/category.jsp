@@ -51,6 +51,12 @@
     font-size: 22pt;
 }
 
+.card-product__img > img{
+    width: 250px;
+    height: 250px;
+}
+
+
 
   </style>
   
