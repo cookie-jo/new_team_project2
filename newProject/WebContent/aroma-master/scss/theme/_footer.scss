@@ -1,6 +1,7 @@
 /*============== footer-area css ===============*/
 .footer-area {
-	background: #002347;
+	// background: #002347;
+	background: $primary-color10;
 	padding: 50px 0px 50px;
 
 	@media(min-width: 800px){
@@ -65,7 +66,8 @@
   }
   
   p{
-    color: #7b838a;
+    // color: #7b838a;
+    color: #ffffff;
   }
 }
 .footer_title {

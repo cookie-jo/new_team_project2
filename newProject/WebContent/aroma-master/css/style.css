@@ -2,7 +2,6 @@
 /*=================== font family ====================*/
 /*=================== color variations ====================*/
 /* $primary-color: #384aeb;/* 진파랑 */
-/* 연보라 */
 /* 주황 */
 /* 연회색 */
 /*=================== fonts ====================*/
@@ -14,7 +13,6 @@
 /*  Basic Style 
 /* =================================== */
 body {
-  
   color: #777777;
   font-family: "Roboto", sans-serif;
   font-size: 15px;
@@ -792,7 +790,7 @@ a {
 /*=================== section intro css end ====================*/
 /*=================== hero banner start ====================*/
 .hero-banner {
-  background: #66BB6A;
+  background: #b4ceb4;
   position: relative;
   margin-bottom: 10px;
 }
@@ -4882,7 +4880,7 @@ a {
 ============================================================================================ */
 /*============== footer-area css ===============*/
 .footer-area {
-  background: #002347;
+  background: #5c3841;
   padding: 50px 0px 50px;
 }
 
@@ -4952,7 +4950,7 @@ a {
 }
 
 .tp_widgets p {
-  color: #7b838a;
+  color: #ffffff;
 }
 
 .footer_title {
