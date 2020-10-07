@@ -82,7 +82,7 @@ public class productDAO {
 		return list;
 	}
 	
-	//클라이언트가 요청한 페이지의 내용만 표시하는 메소드
+	//클라이언트가 요청한 페이지의 내용만 표시하는 메소드, 상품 부분적으로 불러옴
 	public ArrayList<productVO> productPaging(int page) {
 		//1번 페이지 1~10
 		//2번 페이지 11~20
@@ -92,10 +92,10 @@ public class productDAO {
 
 		try {
 			conn();
-			String sql = "select * from (select * from product where pd_num >=? ) where pd_num <= ?;";
+			String sql = "select * from (select * from product where pd_num >=? ) where pd_num <= ?;"; // 상품11~ 20 까지 불러오기
 			psmt = conn.prepareStatement(sql);
-			psmt.setInt(1, startNum);
-			psmt.setInt(2, endNum);
+			psmt.setInt(1, startNum); //시작번호
+			psmt.setInt(2, endNum); //끝번호
 			rs = psmt.executeQuery();
 			
 			while(rs.next()) {
