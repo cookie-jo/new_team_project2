@@ -2,7 +2,6 @@
 /*=================== font family ====================*/
 /*=================== color variations ====================*/
 /* $primary-color: #384aeb;/* 진파랑 */
-/* 연보라 */
 /* 주황 */
 /* 연회색 */
 /*=================== fonts ====================*/
@@ -785,14 +784,13 @@ a {
 
 .section-intro__style {
   border-bottom: 2px solid #99334d;
-  
   padding-bottom: 8px;
 }
 
 /*=================== section intro css end ====================*/
 /*=================== hero banner start ====================*/
 .hero-banner {
-  background: #66BB6A;
+  background: #b4ceb4;
   position: relative;
   margin-bottom: 10px;
 }
@@ -4878,7 +4876,7 @@ a {
 ============================================================================================ */
 /*============== footer-area css ===============*/
 .footer-area {
-  background: #002347;
+  background: #5c3841;
   padding: 50px 0px 50px;
 }
 
@@ -4948,7 +4946,7 @@ a {
 }
 
 .tp_widgets p {
-  color: #7b838a;
+  color: #ffffff;
 }
 
 .footer_title {

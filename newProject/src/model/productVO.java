@@ -1,4 +1,4 @@
-package model;
+package model; 
 
 public class productVO {
 	private int pd_num;

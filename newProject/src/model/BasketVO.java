@@ -1,4 +1,4 @@
-package model;
+package model; 
 // cart.jsp 에서 여러개의 장바구니 목록을 뛰우기 위한 VO
 public class BasketVO {
 	private String img; //제품사진

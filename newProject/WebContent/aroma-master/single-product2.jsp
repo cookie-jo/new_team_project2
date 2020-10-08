@@ -1,5 +1,5 @@
 <%@page import="model.productVO"%>
-<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.ArrayList"%> 
 <%@page import="model.productDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>

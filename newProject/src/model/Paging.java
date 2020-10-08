@@ -1,4 +1,4 @@
-package model;
+package model; 
 
 public class Paging {
 	private int page = 1;//현재 페이지 (get)
