@@ -28,6 +28,6 @@
 		<c:if test="${param.next}">
 		    <a href="${action}?page=${param.endPage+1}">next</a>
 		</c:if>
-		<!-------페이징------->
+		<!-------페이징 ------->
 </body>
 </html>

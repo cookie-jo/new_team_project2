@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <!-- 전역변수 -->
+   <!-- 전역변수    -->
    <%
       String name = (String) session.getAttribute("name");
    %>

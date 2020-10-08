@@ -37,7 +37,7 @@
 
 </head>
 <body>
-	<!--================ Start Header Menu Area =================-->
+	<!--================ Start Header Menu Area  =================-->
 	<header class="header_area">
 		<div class="main_menu">
 			<nav class="navbar navbar-expand-lg navbar-light">

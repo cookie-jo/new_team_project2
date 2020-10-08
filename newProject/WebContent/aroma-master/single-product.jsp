@@ -175,7 +175,7 @@
 							pleasant warm feeling during the winter.</p>
 						<div class="product_count">
 							<label for="qty">Quantity:</label>
-							<button
+							<button 
 								onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
 								class="increase items-count" type="button">
 								<i class="ti-angle-left"></i>

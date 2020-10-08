@@ -1,5 +1,5 @@
 package model;
-
+ 
 public class reviewVO {
 	
 	private int review_count; // 리뷰번호

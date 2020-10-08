@@ -1,5 +1,5 @@
 package model;
-
+ 
 public class TeaVO {
 
 	//tea 테이블 속성 8개 tea_id	tea_name	tea_img	tea_price	tea_efficacy	score_average	score_count	side_effect

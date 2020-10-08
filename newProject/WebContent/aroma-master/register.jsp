@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
 
 <link rel="stylesheet" href="css/style.css">
-</head>
+</head> 
 <body onload="init()">
    <%
       String name = (String) session.getAttribute("name");
