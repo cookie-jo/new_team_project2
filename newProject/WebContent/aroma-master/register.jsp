@@ -1,340 +1,347 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+   pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>¼¼»ó¿¡¼­ °¡Àå ÀÛÀº ÂşÁı, Â÷´©</title>
+<title>ì„¸ìƒì—ì„œ ê°€ì¥ ì‘ì€ ì°»ì§‘, ì°¨ëˆ„</title>
 <link rel="icon" href="img/Fevicon.png" type="image/png">
 <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
 <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
 <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
 <link rel="stylesheet" href="vendors/linericon/style.css">
 <link rel="stylesheet"
-	href="vendors/owl-carousel/owl.theme.default.min.css">
+   href="vendors/owl-carousel/owl.theme.default.min.css">
 <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
 <link rel="stylesheet" href="vendors/nice-select/nice-select.css">
 <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
 
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-	<!--================ Start Header Menu Area =================-->
-	<header class="header_area">
-		<div class="main_menu">
-			<nav class="navbar navbar-expand-lg navbar-light">
-				<div class="container">
-					<a class="navbar-brand logo_h" href="index.html"><img
-						src="img/logo.png" alt=""></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse"
-						data-target="#navbarSupportedContent"
-						aria-controls="navbarSupportedContent" aria-expanded="false"
-						aria-label="Toggle navigation">
-						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-							class="icon-bar"></span>
-					</button>
-					<div class="collapse navbar-collapse offset"
-						id="navbarSupportedContent">
-						<ul class="nav navbar-nav menu_nav ml-auto mr-auto">
-							<li class="nav-item active"><a class="nav-link"
-								href="index.html">È¨</a></li>
-							<li class="nav-item submenu dropdown"><a href="#"
-								class="nav-link dropdown-toggle" data-toggle="dropdown"
-								role="button" aria-haspopup="true" aria-expanded="false">»óÇ°ÆäÀÌÁö</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link"
-										href="category.html">»óÇ°¸ñ·Ï</a></li>
-									<li class="nav-item"><a class="nav-link"
-										href="single-product.html">»óÇ°»ó¼¼ÆäÀÌÁö</a></li>
-									<li class="nav-item"><a class="nav-link"
-										href="checkout.html">ÁÖ¹®ÇÏ±â</a></li>
-									<li class="nav-item"><a class="nav-link"
-										href="confirmation.html">ÁÖ¹®È®ÀÎ¼­</a></li>
-									<li class="nav-item"><a class="nav-link" href="cart.html">Àå¹Ù±¸´Ï</a></li>
-								</ul></li>
-							<li class="nav-item submenu dropdown"><a href="#"
-								class="nav-link dropdown-toggle" data-toggle="dropdown"
-								role="button" aria-haspopup="true" aria-expanded="false">°Ô½ÃÆÇ</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-									<li class="nav-item"><a class="nav-link"
-										href="single-blog.html">Blog Details</a></li>
-								</ul></li>
-							<li class="nav-item submenu dropdown"><a href="#"
-								class="nav-link dropdown-toggle" data-toggle="dropdown"
-								role="button" aria-haspopup="true" aria-expanded="false">¿¹</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-									<li class="nav-item"><a class="nav-link"
-										href="register.html">Register</a></li>
-									<li class="nav-item"><a class="nav-link"
-										href="tracking-order.html">Tracking</a></li>
-								</ul></li>
-							<li class="nav-item"><a class="nav-link" href="contact.html">°í°´¼¾ÅÍ</a></li>
-						</ul>
+<body onload="init()">
+   <%
+      String name = (String) session.getAttribute("name");
+   %>
+   <!--================ Start Header Menu Area =================-->
+   <header class="header_area">
+      <div class="main_menu">
+         <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+               <a class="navbar-brand logo_h" href="index.jsp"><img
+                  src="img/logo.png" alt=""></a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="icon-bar"></span> <span class="icon-bar"></span> <span
+                     class="icon-bar"></span>
+               </button>
+               <div class="collapse navbar-collapse offset"
+                  id="navbarSupportedContent">
+                  <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+                     <li class="nav-item active"><a class="nav-link"
+                        href="index.html">í™ˆ</a></li>
+                     <li class="nav-item submenu dropdown"><a href="#"
+                        class="nav-link dropdown-toggle" data-toggle="dropdown"
+                        role="button" aria-haspopup="true" aria-expanded="false">ìƒí’ˆí˜ì´ì§€</a>
+                        <ul class="dropdown-menu">
+                           <li class="nav-item"><a class="nav-link"
+                              href="category.html">ìƒí’ˆëª©ë¡</a></li>
+                           <li class="nav-item"><a class="nav-link"
+                              href="single-product.html">ìƒí’ˆìƒì„¸í˜ì´ì§€</a></li>
+                           <li class="nav-item"><a class="nav-link"
+                              href="checkout.html">ì£¼ë¬¸í•˜ê¸°</a></li>
+                           <li class="nav-item"><a class="nav-link"
+                              href="confirmation.html">ì£¼ë¬¸í™•ì¸ì„œ</a></li>
+                           <li class="nav-item"><a class="nav-link" href="cart.html">ì¥ë°”êµ¬ë‹ˆ</a></li>
+                        </ul></li>
+                     <li class="nav-item submenu dropdown"><a href="#"
+                        class="nav-link dropdown-toggle" data-toggle="dropdown"
+                        role="button" aria-haspopup="true" aria-expanded="false">ê²Œì‹œíŒ</a>
+                        <ul class="dropdown-menu">
+                           <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                           <li class="nav-item"><a class="nav-link"
+                              href="single-blog.html">Blog Details</a></li>
+                        </ul></li>
+                     <li class="nav-item submenu dropdown"><a href="#"
+                        class="nav-link dropdown-toggle" data-toggle="dropdown"
+                        role="button" aria-haspopup="true" aria-expanded="false">ì˜ˆ</a>
+                        <ul class="dropdown-menu">
+                           <%if(name != null){ %>
+                           <li class="nav-item"><a class="nav-link" href="../member_logout">ë¡œê·¸ì•„ì›ƒ</a></li>
+                        <%}else{ %>
+                           <li class="nav-item"><a class="nav-link" href="login.jsp">ë¡œê·¸ì¸</a></li>
+                           <li class="nav-item"><a class="nav-link" href="register.jsp">íšŒì›ê°€ì…</a></li>
+                        <%} %>
+                           <!-- <li class="nav-item"><a class="nav-link"
+                              href="tracking-order.jsp">Tracking</a></li> -->
+                        </ul></li>
+                     <li class="nav-item"><a class="nav-link" href="contact.html">ê³ ê°ì„¼í„°</a></li>
+                  </ul>
 
-						<ul class="nav-shop">
-							<li class="nav-item"><button>
-									<i class="ti-search"></i>
-								</button></li>
-							<li class="nav-item"><button>
-									<i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span>
-								</button></li>
-							<!-- <li class="nav-item"><a class="button button-hero" href="login.html">·Î±×ÀÎ</a></li> -->
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</div>
-	</header>
-	<!--================ End Header Menu Area =================-->
+                  <ul class="nav-shop">
+                     <li class="nav-item"><button>
+                           <i class="ti-search"></i>
+                        </button></li>
+                     <li class="nav-item"><button>
+                           <i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span>
+                        </button></li>
+                     <!-- <li class="nav-item"><a class="button button-hero" href="login.html">ë¡œê·¸ì¸</a></li> -->
+                  </ul>
+               </div>
+            </div>
+         </nav>
+      </div>
+   </header>
+   <!--================ End Header Menu Area =================-->
 
-	<main class="site-main">
+   <main class="site-main">
 
 
-		<!-- ================ start banner area ================= -->
-		<section class="blog-banner-area" id="category">
-			<div class="container h-100">
-				<div class="blog-banner">
-					<div class="text-center">
-						<h1>È¸¿ø °¡ÀÔ</h1>
-						<nav aria-label="breadcrumb" class="banner-breadcrumb">
+      <!-- ================ start banner area ================= -->
+      <section class="blog-banner-area" id="category">
+         <div class="container h-100">
+            <div class="blog-banner">
+               <div class="text-center">
+                  <h1>íšŒì› ê°€ì…</h1>
+                  <nav aria-label="breadcrumb" class="banner-breadcrumb">
 
-							<!-- ÁÖ¼® Ã³¸® -->
-							<!--             <ol class="breadcrumb">
+                     <!-- ì£¼ì„ ì²˜ë¦¬ -->
+                     <!--             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">È¸¿ø °¡ÀÔ</li>
+              <li class="breadcrumb-item active" aria-current="page">íšŒì› ê°€ì…</li>
             </ol> -->
-						</nav>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- ================ end banner area ================= -->
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- ================ end banner area ================= -->
 
-		<!--================Login Box Area =================-->
-		<section class="login_box_area section-margin">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6">
-						<div class="login_box_img">
-							<div class="hover">
-								<h4>ÀÌ¹Ì ¾ÆÀÌµğ°¡ ÀÖÀ¸½Å°¡¿ä ?</h4>
-								<p>·Î±×ÀÎ ÇØ¼­ ´Ù¾çÇÑ Â÷´©ÀÇ »óÇ°À» ¸¸³ªº¸¼¼¿ä</p>
-								<a class="button button-account" href="login.html">·Î±×ÀÎ ÇÏ·¯°¡±â</a>
-							</div>
-						</div>
-					</div>
-					<!-- È¸¿ø°¡ÀÔ -->
-					<div class="col-lg-6">
-						<div class="login_form_inner register_form_inner">
-							<h3>È¸¿ø °¡ÀÔÇÏ±â</h3>
-							<form class="row login_form" action="../member_join"
-								id="register_form">
-								<div class="col-md-12 form-group">
-									<input type="text" class="form-control" id="name" name="name"
-										placeholder="ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä" onfocus="this.placeholder = ''"
-										onblur="this.placeholder = 'ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä'">
-								</div>
-								<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="email" name="id"
-									placeholder="Id" onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Email Address'">
-							</div>
-							<div class="col-md-12 form-group">
-								<input type="password" class="form-control" id="password"
-									name="pw" placeholder="Password"
-									onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Password'">
-							</div>
-							<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="confirmPassword"
-									name="tel" placeholder="TEL" onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Confirm Password'">
-							</div>
+      <!--================Login Box Area =================-->
+      <section class="login_box_area section-margin">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-6">
+                  <div class="login_box_img">
+                     <div class="hover">
+                        <h4>ì´ë¯¸ ì•„ì´ë””ê°€ ìˆìœ¼ì‹ ê°€ìš” ?</h4>
+                        <p>ë¡œê·¸ì¸ í•´ì„œ ë‹¤ì–‘í•œ ì°¨ëˆ„ì˜ ìƒí’ˆì„ ë§Œë‚˜ë³´ì„¸ìš”</p>
+                        <a class="button button-account" href="login.jsp">ë¡œê·¸ì¸ í•˜ëŸ¬ê°€ê¸°</a>
+                     </div>
+                  </div>
+               </div>
+               <!-- íšŒì›ê°€ì… -->
+               <div class="col-lg-6">
+                  <div class="login_form_inner register_form_inner">
+                     <h3>íšŒì› ê°€ì…í•˜ê¸°</h3>
+                     <form name="form" id="form" method="post"class="row login_form" action="../member_join"
+                        id="register_form">
+                        <div class="col-md-12 form-group">
+                           <input type="text" class="form-control" id="name" name="name"
+                              placeholder="ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”" onfocus="this.placeholder = ''"
+                              onblur="this.placeholder = 'ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”'">
+                        </div>
+                        <div class="col-md-12 form-group">
+                        <input type="text" class="form-control" id="email" name="id"
+                           placeholder="Id" onfocus="this.placeholder = ''"
+                           onblur="this.placeholder = 'Email Address'">
+                     </div>
+                     <div class="col-md-12 form-group">
+                        <input type="password" class="form-control" id="password"
+                           name="pw" placeholder="Password"
+                           onfocus="this.placeholder = ''"
+                           onblur="this.placeholder = 'Password'">
+                     </div>
+                     <div class="col-md-12 form-group">
+                        <input type="text" class="form-control" id="confirmPassword"
+                           name="tel" placeholder="TEL" onfocus="this.placeholder = ''"
+                           onblur="this.placeholder = 'Confirm Password'">
+                     </div>
 
-							<input type="button" onClick="goPopup()"
-								class="user_registered-zip" value="ÁÖ¼Ò°Ë»ö" />
-							<div class="forms_field">
-								<div class="col-md-12 form-group">
-									<input type="text" placeholder="Addr" style="width: 500px;"
-										id="roadFullAddr" name="addr" class="form-control" />
+                     <input type="button" onClick="goPopup()" value="ì£¼ì†Œê²€ìƒ‰" />
+                     <div id="list"></div>
+                     <div id="callBackDiv" class="forms_field">      
+                        <div class="col-md-12 form-group">
+                           <input type="text" placeholder="Addr" style="width: 500px;"
+                              id="roadFullAddr" name="addr" class="form-control" />
 
-								</div>
-								<div class="col-md-12 form-group">
+                        </div>
+                        <div class="col-md-12 form-group">
 
-									<input type="text" placeholder="Post Number"
-										style="width: 500px;" id="zipNo" name="post"
-										class="form-control" />
-								</div>
+                           <input type="text" placeholder="Post Number"
+                              style="width: 500px;" id="zipNo" name="post"
+                              class="form-control" />
+                        </div>
 
-								<div class="col-md-12 form-group"></div>
-								<div class="col-md-12 form-group">
-									<button type="submit" value="submit"
-										class="button button-register w-100">Register</button>
-								</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-		<!--================End Login Box Area =================-->
-
-
-
-		<!--================ Start footer Area  =================-->
-		<footer class="footer">
-			<div class="footer-area">
-				<div class="container">
-					<div class="row section_gap">
-						<div class="col-lg-3 col-md-6 col-sm-6">
-							<div class="single-footer-widget tp_widgets">
-								<h4 class="footer_title large_title">Â÷´©</h4>
-								<p>
-									º¸´Ù ¸¹Àº »ç¶÷µéÀÌ ´Ù¾çÇÑ Â÷¸¦ ¼Õ½±°Ô Áñ±â´Â °ÍÀ» ÁöÇâÇÕ´Ï´Ù. <br> Â÷¸¦ ÅëÇØ µûµíÇÔ°ú »ç¶ûÀ»
-									³ª´©´Â ¾Æ¸§´Ù¿î ¼¼»óÀÌ µÇ±æ ¿øÇÕ´Ï´Ù.
-								</p>
-								<p>We aim to make it easier for more people to enjoy a
-									variety of tea. I wish you a beautiful world where you can
-									share warmth and love in your car.</p>
-							</div>
-						</div>
-						<div class="offset-lg-1 col-lg-2 col-md-6 col-sm-6">
-							<div class="single-footer-widget tp_widgets">
-								<h4 class="footer_title">¹Ù·Î°¡±â</h4>
-								<ul class="list">
-									<li><a href="#">È¨</a></li>
-									<li><a href="#">»óÇ°ÆäÀÌÁö</a></li>
-									<!-- <li><a href="#">Blog</a></li> -->
-									<li><a href="#">°Ô½ÃÆÇ</a></li>
-									<!-- <li><a href="#">Brand</a></li> -->
-									<li><a href="#">°í°´¼¾ÅÍ</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-lg-2 col-md-6 col-sm-6">
-							<div class="single-footer-widget instafeed">
-								<h4 class="footer_title">±«Â¥°³¹ßÀÚµé</h4>
-								<ul class="list instafeed d-flex flex-wrap">
-									<li><img src="img/footer1.png" alt="">
-									<p align="center">Á¶±¹Èñ</p></li>
-									<li><img src="img/footer2.png" alt="">
-									<p align="center">°­Àº¼ö</p></li>
-									<li><img src="img/footer3.png" alt="">
-									<p align="center">Á¶¸í¼º</p></li>
-									<li><img src="img/footer4.png" alt="">
-									<p align="center">À¯ÁöÈÆ</p></li>
-									<li><img src="img/footer5.png" alt="">
-									<p align="center">ÀÌ°ÇÈñ</p></li>
-								</ul>
-							</div>
-						</div>
-						<div class="offset-lg-1 col-lg-3 col-md-6 col-sm-6">
-							<div class="single-footer-widget tp_widgets">
-								<h4 class="footer_title">°í°´¼¾ÅÍ</h4>
-								<div class="ml-40">
-									<p class="sm-head">
-										<span class="fa fa-location-arrow"></span> ÁÖ¼Ò
-									</p>
-									<p>±¤ÁÖ ³²±¸ ¼Û¾Ï·Î 60</p>
-
-									<p class="sm-head">
-										<span class="fa fa-phone"></span> ÀüÈ­¹øÈ£
-									</p>
-									<p>
-										010-0000-0000 <br> 010-0000-0000
-									</p>
-
-									<p class="sm-head">
-										<span class="fa fa-envelope"></span> ÀÌ¸ŞÀÏ
-									</p>
-									<p>
-										free@infoexample.com <br> www.infoexample.com
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="footer-bottom">
-				<div class="container">
-					<div class="row d-flex">
-						<p class="col-lg-12 footer-text text-center">
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-							Copyright &copy;
-							<script>
-								document.write(new Date().getFullYear());
-							</script>
-							All rights reserved | This template is made with <i
-								class="fa fa-heart" aria-hidden="true"></i> by <a
-								href="https://colorlib.com" target="_blank">°¡Â¥°³¹ßÀÚ</a>
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						</p>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<!--================ End footer Area  =================-->
+                        <div class="col-md-12 form-group"></div>
+                        <div class="col-md-12 form-group">
+                           <button type="submit" value="submit"
+                              class="button button-register w-100">Register</button>
+                        </div>
+                     </div>                     
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+      <!--================End Login Box Area =================-->
 
 
 
-		<script src="vendors/jquery/jquery-3.2.1.min.js"></script>
-		<script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
-		<script src="vendors/skrollr.min.js"></script>
-		<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-		<script src="vendors/nice-select/jquery.nice-select.min.js"></script>
-		<script src="vendors/jquery.ajaxchimp.min.js"></script>
-		<script src="vendors/mail-script.js"></script>
-		<script src="js/main.js"></script>
-		<script language="javascript">
-// opener°ü·Ã ¿À·ù°¡ ¹ß»ıÇÏ´Â °æ¿ì ¾Æ·¡ ÁÖ¼®À» ÇØÁöÇÏ°í, »ç¿ëÀÚÀÇ µµ¸ŞÀÎÁ¤º¸¸¦ ÀÔ·ÂÇÕ´Ï´Ù. ("ÆË¾÷API È£Ãâ ¼Ò½º"µµ µ¿ÀÏÇÏ°Ô Àû¿ë½ÃÄÑ¾ß ÇÕ´Ï´Ù.)
+      <!--================ Start footer Area  =================-->
+      <footer class="footer">
+         <div class="footer-area">
+            <div class="container">
+               <div class="row section_gap">
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                     <div class="single-footer-widget tp_widgets">
+                        <h4 class="footer_title large_title">ì°¨ëˆ„</h4>
+                        <p>
+                           ë³´ë‹¤ ë§ì€ ì‚¬ëŒë“¤ì´ ë‹¤ì–‘í•œ ì°¨ë¥¼ ì†ì‰½ê²Œ ì¦ê¸°ëŠ” ê²ƒì„ ì§€í–¥í•©ë‹ˆë‹¤. <br> ì°¨ë¥¼ í†µí•´ ë”°ë“¯í•¨ê³¼ ì‚¬ë‘ì„
+                           ë‚˜ëˆ„ëŠ” ì•„ë¦„ë‹¤ìš´ ì„¸ìƒì´ ë˜ê¸¸ ì›í•©ë‹ˆë‹¤.
+                        </p>
+                        <p>We aim to make it easier for more people to enjoy a
+                           variety of tea. I wish you a beautiful world where you can
+                           share warmth and love in your car.</p>
+                     </div>
+                  </div>
+                  <div class="offset-lg-1 col-lg-2 col-md-6 col-sm-6">
+                     <div class="single-footer-widget tp_widgets">
+                        <h4 class="footer_title">ë°”ë¡œê°€ê¸°</h4>
+                        <ul class="list">
+                           <li><a href="#">í™ˆ</a></li>
+                           <li><a href="#">ìƒí’ˆí˜ì´ì§€</a></li>
+                           <!-- <li><a href="#">Blog</a></li> -->
+                           <li><a href="#">ê²Œì‹œíŒ</a></li>
+                           <!-- <li><a href="#">Brand</a></li> -->
+                           <li><a href="#">ê³ ê°ì„¼í„°</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-6 col-sm-6">
+                     <div class="single-footer-widget instafeed">
+                        <h4 class="footer_title">ê´´ì§œê°œë°œìë“¤</h4>
+                        <ul class="list instafeed d-flex flex-wrap">
+                           <li><img src="img/footer1.png" alt="">
+                           <p align="center">ì¡°êµ­í¬</p></li>
+                           <li><img src="img/footer2.png" alt="">
+                           <p align="center">ê°•ì€ìˆ˜</p></li>
+                           <li><img src="img/footer3.png" alt="">
+                           <p align="center">ì¡°ëª…ì„±</p></li>
+                           <li><img src="img/footer4.png" alt="">
+                           <p align="center">ìœ ì§€í›ˆ</p></li>
+                           <li><img src="img/footer5.png" alt="">
+                           <p align="center">ì´ê±´í¬</p></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="offset-lg-1 col-lg-3 col-md-6 col-sm-6">
+                     <div class="single-footer-widget tp_widgets">
+                        <h4 class="footer_title">ê³ ê°ì„¼í„°</h4>
+                        <div class="ml-40">
+                           <p class="sm-head">
+                              <span class="fa fa-location-arrow"></span> ì£¼ì†Œ
+                           </p>
+                           <p>ê´‘ì£¼ ë‚¨êµ¬ ì†¡ì•”ë¡œ 60</p>
+
+                           <p class="sm-head">
+                              <span class="fa fa-phone"></span> ì „í™”ë²ˆí˜¸
+                           </p>
+                           <p>
+                              010-0000-0000 <br> 010-0000-0000
+                           </p>
+
+                           <p class="sm-head">
+                              <span class="fa fa-envelope"></span> ì´ë©”ì¼
+                           </p>
+                           <p>
+                              free@infoexample.com <br> www.infoexample.com
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="footer-bottom">
+            <div class="container">
+               <div class="row d-flex">
+                  <p class="col-lg-12 footer-text text-center">
+                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                     Copyright &copy;
+                     <script>
+                        document.write(new Date().getFullYear());
+                     </script>
+                     All rights reserved | This template is made with <i
+                        class="fa fa-heart" aria-hidden="true"></i> by <a
+                        href="https://colorlib.com" target="_blank">ê°€ì§œê°œë°œì</a>
+                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                  </p>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!--================ End footer Area  =================-->
+
+
+
+      <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+      <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+      <script src="vendors/skrollr.min.js"></script>
+      <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+      <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
+      <script src="vendors/jquery.ajaxchimp.min.js"></script>
+      <script src="vendors/mail-script.js"></script>
+      <script src="js/main.js"></script>
+      <script language="javascript">
+// openerê´€ë ¨ ì˜¤ë¥˜ê°€ ë°œìƒí•˜ëŠ” ê²½ìš° ì•„ë˜ ì£¼ì„ì„ í•´ì§€í•˜ê³ , ì‚¬ìš©ìì˜ ë„ë©”ì¸ì •ë³´ë¥¼ ì…ë ¥í•©ë‹ˆë‹¤. ("íŒì—…API í˜¸ì¶œ ì†ŒìŠ¤"ë„ ë™ì¼í•˜ê²Œ ì ìš©ì‹œì¼œì•¼ í•©ë‹ˆë‹¤.)
 //document.domain = "abc.go.kr";
 
 function goPopup(){
-	// ÁÖ¼Ò°Ë»öÀ» ¼öÇàÇÒ ÆË¾÷ ÆäÀÌÁö¸¦ È£ÃâÇÕ´Ï´Ù.
-	// È£ÃâµÈ ÆäÀÌÁö(jusopopup.jsp)¿¡¼­ ½ÇÁ¦ ÁÖ¼Ò°Ë»öURL(http://www.juso.go.kr/addrlink/addrLinkUrl.do)¸¦ È£ÃâÇÏ°Ô µË´Ï´Ù.
-	var pop = window.open("./jusoPopup.jsp","pop","width=570,height=420, scrollbars=yes, resizable=yes"); 
-	
-	// ¸ğ¹ÙÀÏ À¥ÀÎ °æ¿ì, È£ÃâµÈ ÆäÀÌÁö(jusopopup.jsp)¿¡¼­ ½ÇÁ¦ ÁÖ¼Ò°Ë»öURL(http://www.juso.go.kr/addrlink/addrMobileLinkUrl.do)¸¦ È£ÃâÇÏ°Ô µË´Ï´Ù.
+   // ì£¼ì†Œê²€ìƒ‰ì„ ìˆ˜í–‰í•  íŒì—… í˜ì´ì§€ë¥¼ í˜¸ì¶œí•©ë‹ˆë‹¤.
+   // í˜¸ì¶œëœ í˜ì´ì§€(jusopopup.jsp)ì—ì„œ ì‹¤ì œ ì£¼ì†Œê²€ìƒ‰URL(http://www.juso.go.kr/addrlink/addrLinkUrl.do)ë¥¼ í˜¸ì¶œí•˜ê²Œ ë©ë‹ˆë‹¤.
+   var pop = window.open("./jusoPopup.jsp","pop","width=570,height=420, scrollbars=yes, resizable=yes"); 
+   
+   // ëª¨ë°”ì¼ ì›¹ì¸ ê²½ìš°, í˜¸ì¶œëœ í˜ì´ì§€(jusopopup.jsp)ì—ì„œ ì‹¤ì œ ì£¼ì†Œê²€ìƒ‰URL(http://www.juso.go.kr/addrlink/addrMobileLinkUrl.do)ë¥¼ í˜¸ì¶œí•˜ê²Œ ë©ë‹ˆë‹¤.
     //var pop = window.open("/popup/jusoPopup.jsp","pop","scrollbars=yes, resizable=yes"); 
 }
 
 
 function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAddr, jibunAddr, zipNo, admCd, rnMgtSn, bdMgtSn,detBdNmList,bdNm,bdKdcd,siNm,sggNm,emdNm,liNm,rn,udrtYn,buldMnnm,buldSlno,mtYn,lnbrMnnm,lnbrSlno,emdNo){
-		// ÆË¾÷ÆäÀÌÁö¿¡¼­ ÁÖ¼ÒÀÔ·ÂÇÑ Á¤º¸¸¦ ¹Ş¾Æ¼­, Çö ÆäÀÌÁö¿¡ Á¤º¸¸¦ µî·ÏÇÕ´Ï´Ù.
-		document.form.roadFullAddr.value = roadFullAddr;
-	/* 	document.form.roadAddrPart1.value = roadAddrPart1;
-		document.form.roadAddrPart2.value = roadAddrPart2;
-		document.form.addrDetail.value = addrDetail;
-		document.form.engAddr.value = engAddr;
-		document.form.jibunAddr.value = jibunAddr; */
-		document.form.zipNo.value = zipNo;
-/* 		document.form.admCd.value = admCd;
-		document.form.rnMgtSn.value = rnMgtSn;
-		document.form.bdMgtSn.value = bdMgtSn;
-		document.form.detBdNmList.value = detBdNmList; */
-		/** 2017³â 2¿ù Ãß°¡Á¦°ø **/
-/* 		document.form.bdNm.value = bdNm;
-		document.form.bdKdcd.value = bdKdcd;
-		document.form.siNm.value = siNm;
-		document.form.sggNm.value = sggNm;
-		document.form.emdNm.value = emdNm;
-		document.form.liNm.value = liNm;
-		document.form.rn.value = rn;
-		document.form.udrtYn.value = udrtYn;
-		document.form.buldMnnm.value = buldMnnm;
-		document.form.buldSlno.value = buldSlno;
-		document.form.mtYn.value = mtYn;
-		document.form.lnbrMnnm.value = lnbrMnnm;
-		document.form.lnbrSlno.value = lnbrSlno; */
-		/** 2017³â 3¿ù Ãß°¡Á¦°ø **/
-/* 		document.form.emdNo.value = emdNo; */
-		
+      // íŒì—…í˜ì´ì§€ì—ì„œ ì£¼ì†Œì…ë ¥í•œ ì •ë³´ë¥¼ ë°›ì•„ì„œ, í˜„ í˜ì´ì§€ì— ì •ë³´ë¥¼ ë“±ë¡í•©ë‹ˆë‹¤.
+      document.form.roadFullAddr.value = roadFullAddr;
+   /*    document.form.roadAddrPart1.value = roadAddrPart1;
+      document.form.roadAddrPart2.value = roadAddrPart2;
+      document.form.addrDetail.value = addrDetail;
+      document.form.engAddr.value = engAddr;
+      document.form.jibunAddr.value = jibunAddr; */
+      document.form.zipNo.value = zipNo;
+/*       document.form.admCd.value = admCd;
+      document.form.rnMgtSn.value = rnMgtSn;
+      document.form.bdMgtSn.value = bdMgtSn;
+      document.form.detBdNmList.value = detBdNmList; */
+      /** 2017ë…„ 2ì›” ì¶”ê°€ì œê³µ **/
+/*       document.form.bdNm.value = bdNm;
+      document.form.bdKdcd.value = bdKdcd;
+      document.form.siNm.value = siNm;
+      document.form.sggNm.value = sggNm;
+      document.form.emdNm.value = emdNm;
+      document.form.liNm.value = liNm;
+      document.form.rn.value = rn;
+      document.form.udrtYn.value = udrtYn;
+      document.form.buldMnnm.value = buldMnnm;
+      document.form.buldSlno.value = buldSlno;
+      document.form.mtYn.value = mtYn;
+      document.form.lnbrMnnm.value = lnbrMnnm;
+      document.form.lnbrSlno.value = lnbrSlno; */
+      /** 2017ë…„ 3ì›” ì¶”ê°€ì œê³µ **/
+/*       document.form.emdNo.value = emdNo; */
+      
 }
 
 

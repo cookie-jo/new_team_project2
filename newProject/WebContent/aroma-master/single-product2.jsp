@@ -181,7 +181,7 @@
 								<i class="ti-angle-left"></i>
 							</button>
 							<!--form 형태로 값을 넘겨주는 부분. type = hidden 쓰면 안보이면서 form태그로 감싸서 자바스크립트로 frm함수 만들어서 값을 넘겨주는게 가능-->
-							<form name="frm" action ="cart.jsp" method = "post">
+							<form name="frm" action ="cart2.jsp" method = "post">
 							<input type="hidden" name="img" value="<%=img1%>"/>
 							<input type="hidden" name="name" value="<%=name1%>"/>
 							<input type="hidden" name="price" value="<%=price1%>"/>

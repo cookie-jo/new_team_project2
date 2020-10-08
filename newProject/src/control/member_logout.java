@@ -10,15 +10,15 @@ import javax.servlet.http.HttpSession;
 
 @WebServlet("/member_logout")
 public class member_logout extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+   private static final long serialVersionUID = 1L;
 
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		System.out.println("로그아웃");
-		
-		HttpSession session = request.getSession();
-		session.removeAttribute("name");
-		
-		response.sendRedirect("aroma-master/index.jsp");
-	}
+   protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+      
+      System.out.println("로그아웃");
+      
+      HttpSession session = request.getSession();
+      session.removeAttribute("name");
+      
+      response.sendRedirect("aroma-master/index.jsp");
+   }
 }

@@ -264,7 +264,7 @@
                     <p>Accessories</p> <!--이건 제품분류인데 일단 두자-->
                     
                     <!--쿼리스트링으로 이미지, 상품명, 가격 넘기는 코드 a태그로 넘기면 무조건 get방식으로 넘어감.-->
-                    <h4 class="card-product__title"><a href="single-product.jsp?img=<%=list.get(i).getTea_img()%>&name=<%=list.get(i).getTea_name()%>&price=<%=list.get(i).getTea_price()%>"><%=list.get(i).getTea_name() %></a></h4> <!--제품명-->
+                    <h4 class="card-product__title"><a href="single-product2.jsp?img=<%=list.get(i).getTea_img()%>&name=<%=list.get(i).getTea_name()%>&price=<%=list.get(i).getTea_price()%>"><%=list.get(i).getTea_name() %></a></h4> <!--제품명-->
                     <p class="card-product__price"><%=list.get(i).getTea_price() %></p> <!--가격-->
                   </div>
                 </div>

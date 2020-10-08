@@ -1,3 +1,8 @@
+<%@page import="model.TeaVO"%>
+<%@page import="model.BasketVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -139,6 +144,7 @@
         <div class="billing_details">
             <div class="row">
                 <div class="col-lg-8">
+                <!--회원정보 가져오기-->
                     <h3>Billing Details</h3>
                     <form class="row contact_form" action="#" method="post" novalidate="novalidate">
                         <div class="col-md-6 form-group p_star">
@@ -210,18 +216,35 @@
                     <div class="order_box">
                     
                     	<!--상품 목록페이지-->
-                        <h2>Your Order</h2>
+                        <h2>주문 상세</h2>
                         <ul class="list">
-                            <li><a href="#"><h4>Product <span>Total</span></h4></a></li>
-                            
-                            <li><a href="#">Fresh Blackberry <span class="middle">x 02</span> <span class="last">$720.00</span></a></li>
-                            <li><a href="#">Fresh Tomatoes <span class="middle">x 02</span> <span class="last">$720.00</span></a></li>
-                            <li><a href="#">Fresh Brocoli <span class="middle">x 02</span> <span class="last">$720.00</span></a></li>
+                            <li><a href="#"><h4>제품목록 <span>총합</span></h4></a></li>
+                            <%
+                            	//세션에서 list를 받아와서 반복문을 돌린다.
+                            	ArrayList<BasketVO> list = (ArrayList)session.getAttribute("list");
+                                session.setAttribute("list", list);	
+                                		
+                                int totalCost = 0;
+                                int shipCost = 2500;
+                                
+                                
+                            	for(int i =0; i<list.size(); i++){
+                            %>
+                            <li><a href="#"><%=list.get(i).getName()%><span class="middle">x <%=list.get(i).getCount() %></span> <span class="last"><%=list.get(i).getPrice() %></span></a></li>
+                            <!-- <li><a href="#">Fresh Tomatoes <span class="middle">x 02</span> <span class="last">$720.00</span></a></li>
+                            <li><a href="#">Fresh Brocoli <span class="middle">x 02</span> <span class="last">$720.00</span></a></li> -->
+                            <%
+                            	totalCost += list.get(i).getCount() * Integer.parseInt(list.get(i).getPrice());
+                                if(totalCost > 50000){
+                                	shipCost = 0;
+                                }
+                            	}
+                            %>
                         </ul>
                         <ul class="list list_2">
-                            <li><a href="#">제품 총합 <span>$2160.00</span></a></li>
-                            <li><a href="#">배송비 <span>배송비 : $50.00</span></a></li>
-                            <li><a href="#">전체 총합 <span>$2210.00</span></a></li>
+                            <li><a href="#">제품 총합 <span><%=totalCost %><!-- $2160.00 --></span></a></li>
+                            <li><a href="#">배송비 <span>배송비 : <%=shipCost %></span></a></li>
+                            <li><a href="#">전체 총합 <span><%=totalCost + shipCost %><!-- $2210.00 --></span></a></li>
                         </ul>
                         <div class="payment_item">
                             <div class="radion_btn">
@@ -248,7 +271,7 @@
                             <a href="#">terms & conditions*</a>
                         </div>
                         <div class="text-center">
-                          <a class="button button-paypal" href="confirmation.html">결제하기</a>
+                          <a class="button button-paypal" href="confirmation.jsp">결제하기</a>
                         </div>
                     </div>
                     

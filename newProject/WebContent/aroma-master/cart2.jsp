@@ -327,7 +327,7 @@
                                   <div class="checkout_btn_inner d-flex align-items-center">
                                       <a class="gray_btn" href="category2.jsp">쇼핑계속하기</a>
                                       <!--cart.jsp에서 checkout.jsp로 전체 덩어리를 넘겨주는 부분  굳이 안넘겨줘도 checkout.jsp에서 session으로 받아오면되지않음?-->
-                                      <a class="primary-btn ml-2" href="checkout.jsp">결제창으로 이동</a>
+                                      <a class="primary-btn ml-2" href="checkout2.jsp">결제창으로 이동</a>
                                   </div>
                               </td>
                           </tr>
