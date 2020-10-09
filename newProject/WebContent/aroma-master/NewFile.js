@@ -29,11 +29,13 @@ var survey = []; //Bidimensional array: [ [1,3], [2,4] ]
 	});	
 });
 
+// submit 후 표시되는 팝업
+/*
 //Debug:
 function debug() {
 var debug = "";
 for (i = 0; i < survey.length; i++) {
-  debug += "Nº " + survey[i][0] + " = " + survey[i][1] + "\n";
+  debug += "Question" + survey[i][0] + " = " + survey[i][1] + "\n";
 }
 alert(debug);
-}
+}*/

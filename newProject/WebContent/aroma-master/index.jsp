@@ -129,7 +129,8 @@
                         차를 접하기 어려웠던 이유를 어렵게 생각 했던게 아닐까요? <br>질문을 통해 당신에게 맞는 차를
                         추천해드립니다 !
                      </p>
-                     <a class="button button-hero" href="#">함께 시작하기 </a>
+                     <a class="button button-hero" href="./NewFile2.jsp">시작하기</a>
+                     <!-- <a class="button button-hero" href="#">함께 시작하기 </a> -->
                   </div>
                </div>
             </div>
