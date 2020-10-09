@@ -1,12 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html> 
 <html lang="en"> 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>¼¼»ó¿¡¼­ °¡Àå ÀÛÀº ÂþÁý, Â÷´© </title>
+  <title>ì„¸ìƒì—ì„œ ê°€ìž¥ ìž‘ì€ ì°»ì§‘, ì°¨ëˆ„ </title>
    <link rel="icon" href="img/Fevicon.png" type="image/png">
   <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
@@ -37,21 +37,21 @@
           </button>
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
-              <li class="nav-item active"><a class="nav-link" href="index.html">È¨</a></li>
+              <li class="nav-item active"><a class="nav-link" href="index.html">í™ˆ</a></li>
               <li class="nav-item submenu dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false">»óÇ°ÆäÀÌÁö</a>
+                  aria-expanded="false">ìƒí’ˆíŽ˜ì´ì§€</a>
                 <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="category.html">»óÇ°¸ñ·Ï</a></li>
-                  <li class="nav-item"><a class="nav-link" href="single-product.html">»óÇ°»ó¼¼ÆäÀÌÁö</a></li>
-                  <li class="nav-item"><a class="nav-link" href="checkout.html">ÁÖ¹®ÇÏ±â</a></li>
-                  <li class="nav-item"><a class="nav-link" href="confirmation.html">ÁÖ¹®È®ÀÎ¼­</a></li>
-                  <li class="nav-item"><a class="nav-link" href="cart.html">Àå¹Ù±¸´Ï</a></li>
+                  <li class="nav-item"><a class="nav-link" href="category.html">ìƒí’ˆëª©ë¡</a></li>
+                  <li class="nav-item"><a class="nav-link" href="single-product.html">ìƒí’ˆìƒì„¸íŽ˜ì´ì§€</a></li>
+                  <li class="nav-item"><a class="nav-link" href="checkout.html">ì£¼ë¬¸í•˜ê¸°</a></li>
+                  <li class="nav-item"><a class="nav-link" href="confirmation.html">ì£¼ë¬¸í™•ì¸ì„œ</a></li>
+                  <li class="nav-item"><a class="nav-link" href="cart.html">ìž¥ë°”êµ¬ë‹ˆ</a></li>
                 </ul>
                      </li>
               <li class="nav-item submenu dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false">°Ô½ÃÆÇ</a>
+                  aria-expanded="false">ê²Œì‹œíŒ</a>
                 <ul class="dropdown-menu">
                   <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                   <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
@@ -59,25 +59,25 @@
                      </li>
                      <li class="nav-item submenu dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false">¿¹</a>
+                  aria-expanded="false">ì˜ˆ</a>
                 <ul class="dropdown-menu">
                 <%if(name != null){ %>
-                           <li class="nav-item"><a class="nav-link" href="../member_logout">·Î±×¾Æ¿ô</a></li>
+                           <li class="nav-item"><a class="nav-link" href="../member_logout">ë¡œê·¸ì•„ì›ƒ</a></li>
                         <%}else{ %>
-                           <li class="nav-item"><a class="nav-link" href="login.jsp">·Î±×ÀÎ</a></li>
-                           <li class="nav-item"><a class="nav-link" href="register.jsp">È¸¿ø°¡ÀÔ</a></li>
+                           <li class="nav-item"><a class="nav-link" href="login.jsp">ë¡œê·¸ì¸</a></li>
+                           <li class="nav-item"><a class="nav-link" href="register.jsp">íšŒì›ê°€ìž…</a></li>
                         <%} %>
                            <!-- <li class="nav-item"><a class="nav-link"
                               href="tracking-order.jsp">Tracking</a></li> -->
                 </ul>
               </li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">°í°´¼¾ÅÍ</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">ê³ ê°ì„¼í„°</a></li>
             </ul>
 
             <ul class="nav-shop">
               <li class="nav-item"><button><i class="ti-search"></i></button></li>
               <li class="nav-item"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button> </li>
-              <!-- <li class="nav-item"><a class="button button-hero" href="login.html">·Î±×ÀÎ</a></li> -->
+              <!-- <li class="nav-item"><a class="button button-hero" href="login.html">ë¡œê·¸ì¸</a></li> -->
             </ul>
           </div>
         </div>
@@ -91,13 +91,13 @@
       <div class="container h-100">
          <div class="blog-banner">
             <div class="text-center">
-               <h1>·Î±×ÀÎ / È¸¿ø°¡ÀÔ</h1>
+               <h1>ë¡œê·¸ì¸ / íšŒì›ê°€ìž…</h1>
                <nav aria-label="breadcrumb" class="banner-breadcrumb">
                
-               <!-- ÁÖ¼® Ã³¸® -->
+               <!-- ì£¼ì„ ì²˜ë¦¬ -->
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">·Î±×ÀÎ / È¸¿ø°¡ÀÔ</li>
+              <li class="breadcrumb-item active" aria-current="page">ë¡œê·¸ì¸ / íšŒì›ê°€ìž…</li>
             </ol> 
           </nav>
             </div>
@@ -113,32 +113,32 @@
             <div class="col-lg-6">
                <div class="login_box_img">
                   <div class="hover">
-                     <h4>Ã¹ ¹æ¹®ÀÌ½Å°¡¿ä?</h4>
-                     <p>È¸¿ø °¡ÀÔ ÈÄ ´Ù¾çÇÑ Â÷´© »óÇ°À» ¸¸³ªº¸¼¼¿ä</p>
-                     <a class="button button-account" href="register.jsp">È¸¿ø°¡ÀÔ</a>
+                     <h4>ì²« ë°©ë¬¸ì´ì‹ ê°€ìš”?</h4>
+                     <p>íšŒì› ê°€ìž… í›„ ë‹¤ì–‘í•œ ì°¨ëˆ„ ìƒí’ˆì„ ë§Œë‚˜ë³´ì„¸ìš”</p>
+                     <a class="button button-account" href="register.jsp">íšŒì›ê°€ìž…</a>
                   </div>
                </div>
             </div>
-<!-- ·Î±×ÀÎ -->
+<!-- ë¡œê·¸ì¸ -->
             <div class="col-lg-6">
                <div class="login_form_inner">
-                  <h3>·Î±×ÀÎ</h3>
+                  <h3>ë¡œê·¸ì¸</h3>
                   <form class="row login_form" action="../member_login" id="contactForm" >
                      <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" id="name" name="id" placeholder="ID¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä" onfocus="this.placeholder = ''" onblur="this.placeholder = 'ID¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä'">
+                        <input type="text" class="form-control" id="name" name="id" placeholder="IDë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš”" onfocus="this.placeholder = ''" onblur="this.placeholder = 'IDë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš”'">
                      </div>
                      <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" id="name" name="pw" placeholder="PW¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä" onfocus="this.placeholder = ''" onblur="this.placeholder = 'PW¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä'">
+                        <input type="text" class="form-control" id="name" name="pw" placeholder="PWë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš”" onfocus="this.placeholder = ''" onblur="this.placeholder = 'PWë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš”'">
                      </div>
                      <div class="col-md-12 form-group">
                         <div class="creat_account">
                            <input type="checkbox" id="f-option2" name="selector">
-                           <label for="f-option2">·Î±×ÀÎ »óÅÂ À¯Áö</label>
+                           <label for="f-option2">ë¡œê·¸ì¸ ìƒíƒœ ìœ ì§€</label>
                         </div>
                      </div>
                      <div class="col-md-12 form-group">
-                        <button type="submit" value="submit" class="button button-login w-100">·Î±×ÀÎ</button>
-                        <a href="#">ºñ¹Ð¹øÈ£ Ã£±â</a>
+                        <button type="submit" value="submit" class="button button-login w-100">ë¡œê·¸ì¸</button>
+                        <a href="#">ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸°</a>
                      </div>
                   </form>
                </div>
@@ -157,9 +157,9 @@
             <div class="row section_gap">
                <div class="col-lg-3 col-md-6 col-sm-6">
                   <div class="single-footer-widget tp_widgets">
-                     <h4 class="footer_title large_title">Â÷´© </h4>
+                     <h4 class="footer_title large_title">ì°¨ëˆ„ </h4>
                      <p>
-                        º¸´Ù ¸¹Àº »ç¶÷µéÀÌ ´Ù¾çÇÑ Â÷¸¦ ¼Õ½±°Ô Áñ±â´Â °ÍÀ» ÁöÇâÇÕ´Ï´Ù. <br> Â÷¸¦ ÅëÇØ µûµíÇÔ°ú »ç¶ûÀ» ³ª´©´Â ¾Æ¸§´Ù¿î ¼¼»óÀÌ µÇ±æ ¿øÇÕ´Ï´Ù.
+                        ë³´ë‹¤ ë§Žì€ ì‚¬ëžŒë“¤ì´ ë‹¤ì–‘í•œ ì°¨ë¥¼ ì†ì‰½ê²Œ ì¦ê¸°ëŠ” ê²ƒì„ ì§€í–¥í•©ë‹ˆë‹¤. <br> ì°¨ë¥¼ í†µí•´ ë”°ë“¯í•¨ê³¼ ì‚¬ëž‘ì„ ë‚˜ëˆ„ëŠ” ì•„ë¦„ë‹¤ìš´ ì„¸ìƒì´ ë˜ê¸¸ ì›í•©ë‹ˆë‹¤.
                      </p>
                      <p>
                         We aim to make it easier for more people to enjoy a variety of tea. I wish you a beautiful world where you can share warmth and love in your car.
@@ -168,42 +168,42 @@
                </div>
                <div class="offset-lg-1 col-lg-2 col-md-6 col-sm-6">
                   <div class="single-footer-widget tp_widgets">
-                     <h4 class="footer_title">¹Ù·Î°¡±â</h4>
+                     <h4 class="footer_title">ë°”ë¡œê°€ê¸°</h4>
                      <ul class="list">
-                        <li><a href="#">È¨</a></li>
-                        <li><a href="#">»óÇ°ÆäÀÌÁö</a></li>
+                        <li><a href="#">í™ˆ</a></li>
+                        <li><a href="#">ìƒí’ˆíŽ˜ì´ì§€</a></li>
                         <!-- <li><a href="#">Blog</a></li> -->
-                        <li><a href="#">°Ô½ÃÆÇ</a></li>
+                        <li><a href="#">ê²Œì‹œíŒ</a></li>
                         <!-- <li><a href="#">Brand</a></li> -->
-                        <li><a href="#">°í°´¼¾ÅÍ</a></li>
+                        <li><a href="#">ê³ ê°ì„¼í„°</a></li>
                      </ul>
                   </div>
                </div>
                <div class="col-lg-2 col-md-6 col-sm-6">
                   <div class="single-footer-widget instafeed">
-                     <h4 class="footer_title">±«Â¥°³¹ßÀÚµé</h4>
+                     <h4 class="footer_title">ê´´ì§œê°œë°œìžë“¤</h4>
                      <ul class="list instafeed d-flex flex-wrap">
-                        <li><img src="img/footer1.png" alt=""><p align = "center"> Á¶±¹Èñ</p></li>
-                        <li><img src="img/footer2.png" alt=""><p align = "center"> °­Àº¼ö</p></li>
-                        <li><img src="img/footer3.png" alt=""><p align = "center"> Á¶¸í¼º</p></li>
-                        <li><img src="img/footer4.png" alt=""><p align = "center"> À¯ÁöÈÆ</p></li>
-                        <li><img src="img/footer5.png" alt=""><p align = "center"> ÀÌ°ÇÈñ</p></li>
+                        <li><img src="img/footer1.png" alt=""><p align = "center"> ì¡°êµ­í¬</p></li>
+                        <li><img src="img/footer2.png" alt=""><p align = "center"> ê°•ì€ìˆ˜</p></li>
+                        <li><img src="img/footer3.png" alt=""><p align = "center"> ì¡°ëª…ì„±</p></li>
+                        <li><img src="img/footer4.png" alt=""><p align = "center"> ìœ ì§€í›ˆ</p></li>
+                        <li><img src="img/footer5.png" alt=""><p align = "center"> ì´ê±´í¬</p></li>
                      </ul>
                   </div>
                </div>
                <div class="offset-lg-1 col-lg-3 col-md-6 col-sm-6">
                   <div class="single-footer-widget tp_widgets">
-                     <h4 class="footer_title">°í°´¼¾ÅÍ</h4>
+                     <h4 class="footer_title">ê³ ê°ì„¼í„°</h4>
                      <div class="ml-40">
                         <p class="sm-head">
                            <span class="fa fa-location-arrow"></span>
-                           ÁÖ¼Ò
+                           ì£¼ì†Œ
                         </p>
-                        <p>±¤ÁÖ ³²±¸ ¼Û¾Ï·Î 60 </p>
+                        <p>ê´‘ì£¼ ë‚¨êµ¬ ì†¡ì•”ë¡œ 60 </p>
    
                         <p class="sm-head">
                            <span class="fa fa-phone"></span>
-                           ÀüÈ­¹øÈ£
+                           ì „í™”ë²ˆí˜¸
                         </p>
                         <p>
                            010-0000-0000 <br>
@@ -212,7 +212,7 @@
    
                         <p class="sm-head">
                            <span class="fa fa-envelope"></span>
-                           ÀÌ¸ÞÀÏ
+                           ì´ë©”ì¼
                         </p>
                         <p>
                            free@infoexample.com <br>
@@ -230,7 +230,7 @@
             <div class="row d-flex">
                <p class="col-lg-12 footer-text text-center">
                   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">°¡Â¥°³¹ßÀÚ</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">ê°€ì§œê°œë°œìž</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
             </div>
          </div>

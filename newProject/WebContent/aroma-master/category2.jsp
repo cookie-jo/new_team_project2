@@ -247,7 +247,7 @@
                
               /*여기서 값을 넘겨주는 것*/
               /*개수가 넘어갈 때면 페이징도 추가해줘야함.*/
-            for(int i = 0; i<9; i++){ 
+            for(int i = 9; i<18; i++){ 
                
             %>
               <div class="col-md-6 col-lg-4">
@@ -264,7 +264,7 @@
                     <p>Accessories</p> <!--이건 제품분류인데 일단 두자-->
                     
                     <!--쿼리스트링으로 이미지, 상품명, 가격 넘기는 코드 a태그로 넘기면 무조건 get방식으로 넘어감.-->
-                    <h4 class="card-product__title"><a href="single-product2.jsp?img=<%=list.get(i).getTea_img()%>&name=<%=list.get(i).getTea_name()%>&price=<%=list.get(i).getTea_price()%>"><%=list.get(i).getTea_name() %></a></h4> <!--제품명-->
+                    <h4 class="card-product__title"><a href="single-product.jsp?img=<%=list.get(i).getTea_img()%>&name=<%=list.get(i).getTea_name()%>&price=<%=list.get(i).getTea_price()%>"><%=list.get(i).getTea_name() %></a></h4> <!--제품명-->
                     <p class="card-product__price"><%=list.get(i).getTea_price() %></p> <!--가격-->
                   </div>
                 </div>
@@ -286,15 +286,15 @@
          <!---------------------제품 페이징 버튼 ----------------->
           <div class="col-12 text-center">
             <div class="custom-pagination">
-              <span class="current">1</span>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a href="#">4</a>
-              <a href="#">5</a>   
+              <a href="category.jsp">1</a>
+              <span class="current">2</span>
+              <a href="category3.jsp">3</a>
+              <a href="category4.jsp">4</a>
+              <a href="category5.jsp">5</a>  
                  
                  
          <!----------------------------------   페이징 부분      -------------------------------------->
-              <div id="paging">
+<%--               <div id="paging">
          <!-- 1~10까지 있는 페이지의 페이징 -->
             <c:url var="action" value="/ProductList.do"/>
             <c:if test="${param.prev}">
@@ -317,7 +317,7 @@
             <c:if test="${param.next}">
                 <a href="${action}?page=${param.endPage+1}">next</a>
          </c:if>
-            </div>
+            </div> --%>
             <!----------------------------------   페이징 부분      -------------------------------------->
             
           </div>

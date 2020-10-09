@@ -5,9 +5,9 @@
 <%@page import="model.productDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -247,7 +247,7 @@
                
               /*여기서 값을 넘겨주는 것*/
               /*개수가 넘어갈 때면 페이징도 추가해줘야함.*/
-            for(int i = 0; i<9; i++){ 
+            for(int i = 27; i<36; i++){ 
                
             %>
               <div class="col-md-6 col-lg-4">
@@ -286,10 +286,10 @@
          <!---------------------제품 페이징 버튼 ----------------->
           <div class="col-12 text-center">
             <div class="custom-pagination">
-              <span class="current">1</span>
+              <a href="category.jsp">1</a>
               <a href="category2.jsp">2</a>
               <a href="category3.jsp">3</a>
-              <a href="category4.jsp">4</a>
+              <span class="current">4</span>
               <a href="category5.jsp">5</a>   
                  
                  

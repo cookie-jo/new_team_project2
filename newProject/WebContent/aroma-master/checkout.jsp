@@ -1,3 +1,5 @@
+<%@page import="model.memberDAO"%>
+<%@page import="model.memberVO"%>
 <%@page import="model.TeaVO"%>
 <%@page import="model.BasketVO"%>
 <%@page import="java.util.ArrayList"%>
@@ -140,32 +142,54 @@
         </div> 
         
         -->
-        
+        <%
+                        		
+        	String id = (String) session.getAttribute("id");//로그인아이디를 받아옴
+			memberDAO dao = new memberDAO(); //객체생성
+            memberVO vo = dao.memberInfo(id);//memberDAO 안에 있는 함수 사용. member_list에 담아줌 
+            System.out.println(id); //세션아이디는 넘어옴
+		%>
+		
         <div class="billing_details">
+        <form class="row contact_form" action="confirmation.jsp" method="post" novalidate="novalidate">
+        
+        	<%-- <input type="hidden" name="name" value="<%=vo.getMember_name() %>">
+        	<input type="hidden" name="tel" value="<%=vo.getMember_tel() %>">
+        	<input type="hidden" name="addr" value="<%=vo.getMember_addr()%>">
+        	<input type="hidden" name="post" value="<%=vo.getMember_post()%>"> --%>
+        	
             <div class="row">
                 <div class="col-lg-8">
                 <!--회원정보 가져오기-->
                     <h3>Billing Details</h3>
-                    <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                    
                         <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="first" name="name">
-                            <span class="placeholder" data-placeholder="First name"></span>
+                        	<!--이름 입력하는 부분이 아니라 장바구니에서 회원정보를 넘겨받아서 출력해주는 창이므로 주석처리-->
+                            <!-- <input type="text" class="form-control" id="first" name="name"> -->
+                            <span class="placeholder" data-placeholder="First name">고객명 : <%=vo.getMember_name() %></span>
                         </div>
                         <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="last" name="name">
-                            <span class="placeholder" data-placeholder="Last name"></span>
+                        	<!--이름 입력하는 부분이 아니라 장바구니에서 회원정보를 넘겨받아서 출력해주는 창이므로 주석처리-->
+                            <!-- <input type="text" class="form-control" id="last" name="name"> -->
+                            <span class="placeholder" data-placeholder="Last name">수령인 : <%=vo.getMember_name()  %></span>
+                        </div>
+                        <!-- <div class="col-md-12 form-group">
+                            <input type="text" class="form-control" id="company" name="company" placeholder="Company name">
+                        </div> -->
+                        <div class="col-md-6 form-group p_star">
+                            <!-- <input type="text" class="form-control" id="number" name="number"> -->
+                            <span class="placeholder" data-placeholder="Phone number">전화번호 : <%=vo.getMember_tel() %></span>
                         </div>
                         <div class="col-md-12 form-group">
-                            <input type="text" class="form-control" id="company" name="company" placeholder="Company name">
+                           <!--  <input type="text" class="form-control" id="email" name="compemailany"> -->
+                            <span class="placeholder" data-placeholder="Email Address">배송지 주소 : <%=vo.getMember_addr()%> </span>
                         </div>
-                        <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="number" name="number">
-                            <span class="placeholder" data-placeholder="Phone number"></span>
+                        <div class="col-md-12 form-group">
+                           <!--  <input type="text" class="form-control" id="email" name="compemailany"> -->
+                            <span class="placeholder" data-placeholder="Email Address"> <%=vo.getMember_post()%> </span>
                         </div>
-                        <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="email" name="compemailany">
-                            <span class="placeholder" data-placeholder="Email Address"></span>
-                        </div>
+      
+                     <!-- 국가 선택은 생략
                         <div class="col-md-12 form-group p_star">
                             <select class="country_select">
                                 <option value="1">Country</option>
@@ -173,7 +197,8 @@
                                 <option value="4">Country</option>
                             </select>
                         </div>
-                        <div class="col-md-12 form-group p_star">
+                         -->
+                         <div class="col-md-12 form-group p_star">
                             <input type="text" class="form-control" id="add1" name="add1">
                             <span class="placeholder" data-placeholder="Address line 01"></span>
                         </div>
@@ -209,8 +234,8 @@
                                 <label for="f-option3">Ship to a different address?</label>
                             </div>
                             <textarea class="form-control" name="message" id="message" rows="1" placeholder="Order Notes"></textarea>
-                        </div>
-                    </form>
+                        </div> -
+                 
                 </div>
                 <div class="col-lg-4">
                     <div class="order_box">
@@ -220,13 +245,12 @@
                         <ul class="list">
                             <li><a href="#"><h4>제품목록 <span>총합</span></h4></a></li>
                             <%
-                            	//세션에서 list를 받아와서 반복문을 돌린다.
+                            	
                             	ArrayList<BasketVO> list = (ArrayList)session.getAttribute("list");
                                 session.setAttribute("list", list);	
                                 		
                                 int totalCost = 0;
                                 int shipCost = 2500;
-                                
                                 
                             	for(int i =0; i<list.size(); i++){
                             %>
@@ -271,13 +295,15 @@
                             <a href="#">terms & conditions*</a>
                         </div>
                         <div class="text-center">
-                          <a class="button button-paypal" href="confirmation.jsp">결제하기</a>
+                          <!-- <a class="button button-paypal" href="confirmation.jsp">결제하기</a> -->
+                          <button class="button button-paypal" >결제하기</button>	
                         </div>
                     </div>
-                    
+                      
                     
                 </div>
             </div>
+        </form>
         </div>
     </div>
   </section>
@@ -385,5 +411,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <script src="vendors/jquery.ajaxchimp.min.js"></script>
   <script src="vendors/mail-script.js"></script>
   <script src="js/main.js"></script>
+  <script>
+  	let button-paypal = document.querySelector('.button-paypal');
+  	
+  	button-paypal.addEventListener('click',function(){
+ 		 		
+  	});
+  </script>
 </body>
 </html>

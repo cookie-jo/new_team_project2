@@ -85,7 +85,7 @@ public class TeaDAO {
 		return list;
 	}
 	
-	//클라이언트가 요청한 페이지의 내용만 표시하는 메소드, 상품 부분적으로 불러옴
+	//클라이언트가 요청한 페이지의 내용만 표시하는 메소드, 상품 부분적으로 불러옴 페이징하려고 만든건데, 지금 안쓰임
 	public ArrayList<TeaVO> teaPaging(int page) {
 		//1번 페이지 1~10
 		//2번 페이지 11~20
@@ -148,4 +148,45 @@ public class TeaDAO {
 		}
 		return list;
 	}
+	
+	
+	//차 추천서비스 할 때 사진 불러오는  함수 (만드는 중)
+	public ArrayList<TeaVO> teaJoin(int page) {
+		//1번 페이지 1~10
+		//2번 페이지 11~20
+		ArrayList<TeaVO> list = new ArrayList<TeaVO>();
+
+		try {
+			conn();
+			// s.member_member_id & s.teas_tea_id  여기에 memberDAO 가져오기
+			String sql = "select m.member_id, t.tea_name from member m, teas t, survey_result_1 s "
+					+ "where m.member_id = ? and t.tea_id = ?;\r\n" + 
+					"";
+			psmt = conn.prepareStatement(sql);
+			//psmt.setInt(1, startNum);
+			//psmt.setInt(2, endNum);
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				int tea_id = rs.getInt(1);
+				String tea_name = rs.getString(2);
+				String tea_img = rs.getString(3);
+				String tea_price = rs.getString(4);
+				String tea_efficacy = rs.getString(5);
+				float score_average = rs.getFloat(6);
+				int score_count = rs.getInt(7);
+				String side_effect = rs.getString(8);
+				TeaVO vo = new TeaVO(tea_id, tea_name, tea_img, tea_price, tea_efficacy, score_average, score_count, side_effect);
+				list.add(vo);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return list;
+	}
+	
 }

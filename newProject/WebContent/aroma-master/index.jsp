@@ -1,12 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-   pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+   pageEncoding="UTF-8"%>
 <!DOCTYPE html>  
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>¼¼»ó¿¡¼­ °¡Àå ÀÛÀº ÂþÁý, Â÷´©</title>
+<title>ì„¸ìƒì—ì„œ ê°€ìž¥ ìž‘ì€ ì°»ì§‘, ì°¨ëˆ„</title>
 <link rel="icon" href="img/Fevicon.png" type="image/png">
 <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
 <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
@@ -19,9 +19,13 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <!-- Àü¿ªº¯¼ö    -->
+   <!-- ì „ì—­ë³€ìˆ˜    -->
    <%
       String name = (String) session.getAttribute("name");
+      
+   	  
+   
+   
    %>
    <!--================ Start Header Menu Area =================-->
    <header class="header_area">
@@ -41,51 +45,51 @@
                   id="navbarSupportedContent">
                   <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
                      <li class="nav-item active"><a class="nav-link"
-                        href="index.html">È¨</a></li>
+                        href="index.html">í™ˆ</a></li>
                      <li class="nav-item submenu dropdown"><a href="#"
                         class="nav-link dropdown-toggle" data-toggle="dropdown"
-                        role="button" aria-haspopup="true" aria-expanded="false">»óÇ°ÆäÀÌÁö</a>
+                        role="button" aria-haspopup="true" aria-expanded="false">ìƒí’ˆíŽ˜ì´ì§€</a>
                         <ul class="dropdown-menu">
                            <li class="nav-item"><a class="nav-link"
-                              href="category.jsp">»óÇ°¸ñ·Ï</a></li>
+                              href="category.jsp">ìƒí’ˆëª©ë¡</a></li>
                            <li class="nav-item"><a class="nav-link"
-                              href="single-product.html">»óÇ°»ó¼¼ÆäÀÌÁö</a></li>
+                              href="single-product.html">ìƒí’ˆìƒì„¸íŽ˜ì´ì§€</a></li>
                            <li class="nav-item"><a class="nav-link"
-                              href="checkout.html">ÁÖ¹®ÇÏ±â</a></li>
+                              href="checkout.html">ì£¼ë¬¸í•˜ê¸°</a></li>
                            <li class="nav-item"><a class="nav-link"
-                              href="confirmation.html">ÁÖ¹®È®ÀÎ¼­</a></li>
-                           <li class="nav-item"><a class="nav-link" href="cart.html">Àå¹Ù±¸´Ï</a></li>
+                              href="confirmation.html">ì£¼ë¬¸í™•ì¸ì„œ</a></li>
+                           <li class="nav-item"><a class="nav-link" href="cart.html">ìž¥ë°”êµ¬ë‹ˆ</a></li>
                         </ul></li>
                      <li class="nav-item submenu dropdown"><a href="#"
                         class="nav-link dropdown-toggle" data-toggle="dropdown"
-                        role="button" aria-haspopup="true" aria-expanded="false">°Ô½ÃÆÇ</a>
+                        role="button" aria-haspopup="true" aria-expanded="false">ê²Œì‹œíŒ</a>
                         <ul class="dropdown-menu">
                            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                            <li class="nav-item"><a class="nav-link"
                               href="single-blog.html">Blog Details</a></li>
                         </ul></li>
-                     <!-- ·Î±×ÀÎ ¹× È¸¿ø°¡ÀÔ ¹öÆ° -->
+                     <!-- ë¡œê·¸ì¸ ë° íšŒì›ê°€ìž… ë²„íŠ¼ -->
                      <li class="nav-item submenu dropdown"><a href="#"
                         class="nav-link dropdown-toggle" data-toggle="dropdown"
-                        role="button" aria-haspopup="true" aria-expanded="false">¿¹</a>
+                        role="button" aria-haspopup="true" aria-expanded="false">ì˜ˆ</a>
                         <ul class="dropdown-menu">
                         <%if(name != null){ %>
-                           <li class="nav-item"><a class="nav-link" href="../member_logout">·Î±×¾Æ¿ô</a></li>
+                           <li class="nav-item"><a class="nav-link" href="../member_logout">ë¡œê·¸ì•„ì›ƒ</a></li>
                         <%}else{ %>
-                           <li class="nav-item"><a class="nav-link" href="login.jsp">·Î±×ÀÎ</a></li>
-                           <li class="nav-item"><a class="nav-link" href="register.jsp">È¸¿ø°¡ÀÔ</a></li>
+                           <li class="nav-item"><a class="nav-link" href="login.jsp">ë¡œê·¸ì¸</a></li>
+                           <li class="nav-item"><a class="nav-link" href="register.jsp">íšŒì›ê°€ìž…</a></li>
                         <%} %>
                            <!-- <li class="nav-item"><a class="nav-link"
                               href="tracking-order.jsp">Tracking</a></li> -->
                         </ul></li>
-                     <li class="nav-item"><a class="nav-link" href="contact.html">°í°´¼¾ÅÍ</a></li>
+                     <li class="nav-item"><a class="nav-link" href="contact.html">ê³ ê°ì„¼í„°</a></li>
                   </ul>
-                  <!-- ·Î±×ÀÎ ¹× È¸¿ø°¡ÀÔ ¹öÆ° -->
+                  <!-- ë¡œê·¸ì¸ ë° íšŒì›ê°€ìž… ë²„íŠ¼ -->
                   <ul class="nav-shop">
                      <li class="nav-item"><button>
                            <i class="ti-search"></i>
                         </button></li>
-                        <!-- Àå¹Ù±¸´Ï ¾ÆÀÌÄÜ ´©¸£¸é ¼îÇÎÄ«Æ® ÆäÀÌÁö·Î ¿È -->
+                        <!-- ìž¥ë°”êµ¬ë‹ˆ ì•„ì´ì½˜ ëˆ„ë¥´ë©´ ì‡¼í•‘ì¹´íŠ¸ íŽ˜ì´ì§€ë¡œ ì˜´ -->
                      <li class="nav-item"><a href="cart.jsp"><button>
                            <i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span>
                         </button></li>
@@ -94,7 +98,7 @@
                         href="index.jsp"><%=name %></a></li>
                         <%}else{ %>
                         <li class="nav-item"><a class="button button-hero"
-                        href="login.jsp">·Î±×ÀÎ</a></li>
+                        href="login.jsp">ë¡œê·¸ì¸</a></li>
                         <%} %>
                   </ul>
                </div>
@@ -117,15 +121,15 @@
                </div>
                <div class="col-sm-7 col-lg-6 offset-lg-1 pl-4 pl-md-5 pl-lg-0">
                   <div class="hero-banner__content">
-                     <h4>¼¼»ó¿¡¼­ °¡Àå ÀÛÀº ÂþÁý, Â÷´©</h4>
+                     <h4>ì„¸ìƒì—ì„œ ê°€ìž¥ ìž‘ì€ ì°»ì§‘, ì°¨ëˆ„</h4>
                      <h2>
-                        ´ç½Å¿¡°Ô ¾î¿ï¸®´Â Â÷´Â <br>¹«¾ùÀÎ°¡¿ä?
+                        ë‹¹ì‹ ì—ê²Œ ì–´ìš¸ë¦¬ëŠ” ì°¨ëŠ” <br>ë¬´ì—‡ì¸ê°€ìš”?
                      </h2>
                      <p>
-                        Â÷¸¦ Á¢ÇÏ±â ¾î·Á¿ü´ø ÀÌÀ¯¸¦ ¾î·Æ°Ô »ý°¢ Çß´ø°Ô ¾Æ´Ò±î¿ä? <br>Áú¹®À» ÅëÇØ ´ç½Å¿¡°Ô ¸Â´Â Â÷¸¦
-                        ÃßÃµÇØµå¸³´Ï´Ù !
+                        ì°¨ë¥¼ ì ‘í•˜ê¸° ì–´ë ¤ì› ë˜ ì´ìœ ë¥¼ ì–´ë µê²Œ ìƒê° í–ˆë˜ê²Œ ì•„ë‹ê¹Œìš”? <br>ì§ˆë¬¸ì„ í†µí•´ ë‹¹ì‹ ì—ê²Œ ë§žëŠ” ì°¨ë¥¼
+                        ì¶”ì²œí•´ë“œë¦½ë‹ˆë‹¤ !
                      </p>
-                     <a class="button button-hero" href="#">ÇÔ²² ½ÃÀÛÇÏ±â </a>
+                     <a class="button button-hero" href="#">í•¨ê»˜ ì‹œìž‘í•˜ê¸° </a>
                   </div>
                </div>
             </div>
@@ -165,7 +169,7 @@
       <section class="section-margin calc-60px">
          <div class="container">
             <div class="section-intro pb-60px">
-               <p>°¡Àå ÀÎ±â ÀÖ´Â Â÷</p>
+               <p>ê°€ìž¥ ì¸ê¸° ìžˆëŠ” ì°¨</p>
                <h2>
                   Trending <span class="section-intro__style">Teas</span>
                </h2>
@@ -386,11 +390,11 @@
             <div class="row">
                <div class="col-xl-5">
                   <div class="offer__content text-center">
-                     <h3>ÃÖÃÊ 50% ÇÒÀÎ</h3>
-                     <h4>ÀÔ¹®ÀÚ ¼¼ÀÏ</h4>
-                     <p>Â÷´©ÀÇ ¸â¹ö°¡ µÇ¾îº¸¼¼¿ä!</p>
-                     <a class="button button--active mt-3 mt-xl-4" href="login.html">±¸¸Å
-                        ÇÏ±â</a>
+                     <h3>ìµœì´ˆ 50% í• ì¸</h3>
+                     <h4>ìž…ë¬¸ìž ì„¸ì¼</h4>
+                     <p>ì°¨ëˆ„ì˜ ë©¤ë²„ê°€ ë˜ì–´ë³´ì„¸ìš”!</p>
+                     <a class="button button--active mt-3 mt-xl-4" href="login.html">êµ¬ë§¤
+                        í•˜ê¸°</a>
                   </div>
                </div>
             </div>
@@ -604,7 +608,7 @@
       </section>
       <!-- ================ Best Selling item  carousel end ================= -->
 
-      <!-- ´º½º ÆäÀÌÁö ÁÖ¼® Ã³¸®ÇÔ -->
+      <!-- ë‰´ìŠ¤ íŽ˜ì´ì§€ ì£¼ì„ ì²˜ë¦¬í•¨ -->
 
       <!--     ================ Blog section start =================  
     <section class="blog">
@@ -659,7 +663,7 @@
                   <li><a href="#">By Admin</a></li>
                   <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
                 </ul>
-                <h4 class="card-blog__title"><a href="single-blog.html">Professional design staff and efficient equipment you¡¯ll find we offer</a></h4>
+                <h4 class="card-blog__title"><a href="single-blog.html">Professional design staff and efficient equipment youâ€™ll find we offer</a></h4>
                 <p>Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.</p>
                 <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
               </div>
@@ -670,7 +674,7 @@
     </section>
     ================ Blog section end =================   -->
 
-      <!--  Subscribe ºÎ¹® ÁÖ¼®Ã³¸®·Î º¯È¯ -->
+      <!--  Subscribe ë¶€ë¬¸ ì£¼ì„ì²˜ë¦¬ë¡œ ë³€í™˜ -->
 
       <!--     ================ Subscribe section start ================= 
     <section class="subscribe-position">
@@ -709,10 +713,10 @@
             <div class="row section_gap">
                <div class="col-lg-3 col-md-6 col-sm-6">
                   <div class="single-footer-widget tp_widgets">
-                     <h4 class="footer_title large_title">Â÷´©</h4>
+                     <h4 class="footer_title large_title">ì°¨ëˆ„</h4>
                      <p>
-                        º¸´Ù ¸¹Àº »ç¶÷µéÀÌ ´Ù¾çÇÑ Â÷¸¦ ¼Õ½±°Ô Áñ±â´Â °ÍÀ» ÁöÇâÇÕ´Ï´Ù. <br> Â÷¸¦ ÅëÇØ µûµíÇÔ°ú »ç¶ûÀ» ³ª´©´Â
-                        ¾Æ¸§´Ù¿î ¼¼»óÀÌ µÇ±æ ¿øÇÕ´Ï´Ù.
+                        ë³´ë‹¤ ë§Žì€ ì‚¬ëžŒë“¤ì´ ë‹¤ì–‘í•œ ì°¨ë¥¼ ì†ì‰½ê²Œ ì¦ê¸°ëŠ” ê²ƒì„ ì§€í–¥í•©ë‹ˆë‹¤. <br> ì°¨ë¥¼ í†µí•´ ë”°ë“¯í•¨ê³¼ ì‚¬ëž‘ì„ ë‚˜ëˆ„ëŠ”
+                        ì•„ë¦„ë‹¤ìš´ ì„¸ìƒì´ ë˜ê¸¸ ì›í•©ë‹ˆë‹¤.
                      </p>
                      <p>We aim to make it easier for more people to enjoy a
                         variety of tea. I wish you a beautiful world where you can share
@@ -721,52 +725,52 @@
                </div>
                <div class="offset-lg-1 col-lg-2 col-md-6 col-sm-6">
                   <div class="single-footer-widget tp_widgets">
-                     <h4 class="footer_title">¹Ù·Î°¡±â</h4>
+                     <h4 class="footer_title">ë°”ë¡œê°€ê¸°</h4>
                      <ul class="list">
-                        <li><a href="#">È¨</a></li>
-                        <li><a href="#">»óÇ°ÆäÀÌÁö</a></li>
+                        <li><a href="#">í™ˆ</a></li>
+                        <li><a href="#">ìƒí’ˆíŽ˜ì´ì§€</a></li>
                         <!-- <li><a href="#">Blog</a></li> -->
-                        <li><a href="#">°Ô½ÃÆÇ</a></li>
+                        <li><a href="#">ê²Œì‹œíŒ</a></li>
                         <!-- <li><a href="#">Brand</a></li> -->
-                        <li><a href="#">°í°´¼¾ÅÍ</a></li>
+                        <li><a href="#">ê³ ê°ì„¼í„°</a></li>
                      </ul>
                   </div>
                </div>
                <div class="col-lg-2 col-md-6 col-sm-6">
                   <div class="single-footer-widget instafeed">
-                     <h4 class="footer_title">±«Â¥°³¹ßÀÚµé</h4>
+                     <h4 class="footer_title">ê´´ì§œê°œë°œìžë“¤</h4>
                      <ul class="list instafeed d-flex flex-wrap">
                         <li><img src="img/footer1.png" alt="">
-                        <p align="center">Á¶±¹Èñ</p></li>
+                        <p align="center">ì¡°êµ­í¬</p></li>
                         <li><img src="img/footer2.png" alt="">
-                        <p align="center">°­Àº¼ö</p></li>
+                        <p align="center">ê°•ì€ìˆ˜</p></li>
                         <li><img src="img/footer3.png" alt="">
-                        <p align="center">Á¶¸í¼º</p></li>
+                        <p align="center">ì¡°ëª…ì„±</p></li>
                         <li><img src="img/footer4.png" alt="">
-                        <p align="center">À¯ÁöÈÆ</p></li>
+                        <p align="center">ìœ ì§€í›ˆ</p></li>
                         <li><img src="img/footer5.png" alt="">
-                        <p align="center">ÀÌ°ÇÈñ</p></li>
+                        <p align="center">ì´ê±´í¬</p></li>
                      </ul>
                   </div>
                </div>
                <div class="offset-lg-1 col-lg-3 col-md-6 col-sm-6">
                   <div class="single-footer-widget tp_widgets">
-                     <h4 class="footer_title">°í°´¼¾ÅÍ</h4>
+                     <h4 class="footer_title">ê³ ê°ì„¼í„°</h4>
                      <div class="ml-40">
                         <p class="sm-head">
-                           <span class="fa fa-location-arrow"></span> ÁÖ¼Ò
+                           <span class="fa fa-location-arrow"></span> ì£¼ì†Œ
                         </p>
-                        <p>±¤ÁÖ ³²±¸ ¼Û¾Ï·Î 60</p>
+                        <p>ê´‘ì£¼ ë‚¨êµ¬ ì†¡ì•”ë¡œ 60</p>
 
                         <p class="sm-head">
-                           <span class="fa fa-phone"></span> ÀüÈ­¹øÈ£
+                           <span class="fa fa-phone"></span> ì „í™”ë²ˆí˜¸
                         </p>
                         <p>
                            010-0000-0000 <br> 010-0000-0000
                         </p>
 
                         <p class="sm-head">
-                           <span class="fa fa-envelope"></span> ÀÌ¸ÞÀÏ
+                           <span class="fa fa-envelope"></span> ì´ë©”ì¼
                         </p>
                         <p>
                            free@infoexample.com <br> www.infoexample.com
@@ -789,7 +793,7 @@
                   </script>
                   All rights reserved | This template is made with <i
                      class="fa fa-heart" aria-hidden="true"></i> by <a
-                     href="https://colorlib.com" target="_blank">°¡Â¥°³¹ßÀÚ</a>
+                     href="https://colorlib.com" target="_blank">ê°€ì§œê°œë°œìž</a>
                   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                </p>
             </div>

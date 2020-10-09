@@ -5,6 +5,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+
+import javax.servlet.http.HttpSession;
 
 public class memberDAO {
 
@@ -102,4 +105,34 @@ public class memberDAO {
       }
       return name;
    }
+   
+   
+	public memberVO memberInfo(String id) { //매개변수로 로그인아이디를 받아옴
+		conn();
+		memberVO vo = null;
+		try {
+			String sql = "select * from member where member_id = ?";
+
+			psmt = conn.prepareStatement(sql);
+			
+			psmt.setString(1, id);
+			rs = psmt.executeQuery();
+			while(rs.next()) {
+				String member_id = rs.getString(1);
+				int member_pw = rs.getInt(2);
+				String member_name = rs.getString(3);
+				String member_tel = rs.getString(4);
+				String member_addr = rs.getString(5);
+				String member_post = rs.getString(6);
+				vo = new memberVO(member_name, member_id, member_pw, member_tel, member_addr, member_post);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return vo;
+	}
+   
 }

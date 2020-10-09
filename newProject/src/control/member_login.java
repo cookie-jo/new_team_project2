@@ -46,6 +46,7 @@ public class member_login extends HttpServlet {
          HttpSession session = request.getSession();
          session.setAttribute("name", name);
          session.setAttribute("id", id);
+         
       } else {
          System.out.println("로그인 실패");
       }

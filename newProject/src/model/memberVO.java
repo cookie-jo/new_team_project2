@@ -19,6 +19,16 @@ public memberVO(String member_name, String member_id, int member_pw, String memb
 	this.member_addr = member_addr;
 	this.member_post = member_post;
 }
+
+public memberVO(String member_name, String member_tel, String member_addr,
+		String member_post) {
+	super();
+	this.member_name = member_name;
+	this.member_tel = member_tel;
+	this.member_addr = member_addr;
+	this.member_post = member_post;
+}
+
 public memberVO(String member_id) {
 	super();
 	this.member_id = member_id;

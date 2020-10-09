@@ -1,3 +1,5 @@
+<%@page import="model.memberVO"%>
+<%@page import="model.memberDAO"%>
 <%@page import="model.BasketVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -96,12 +98,35 @@
 			</div>
     </div>
 	</section>
+	
+	<%
+	
+		/* String name = request.getParameter("name");
+		String tel = request.getParameter("tel");
+		String addr = request.getParameter("addr");
+		String post = request.getParameter("post");
+		
+		System.out.println(name);
+		System.out.println(tel);
+		System.out.println(addr); */
+		
+		String id = (String) session.getAttribute("id");//로그인아이디를 받아옴
+		memberDAO dao = new memberDAO(); //객체생성
+        memberVO vo = dao.memberInfo(id);//memberDAO 안에 있는 함수 사용. member_list에 담아줌 
+        System.out.println(id);
+		
+		//db에서 회원정보를 가져와야한다. 어떤회원인지 어떻게 아느냐?
+		//회원의 모든정보를 가져와서 담아서 필요한 것만 빼야한다.
+		//ArrayList로 모든정보를 담으면 내가 맞는 회원인지 
+		// if(세션에 저장해둔 현재아이디 == list.get(i).getId()) 
+	
+	%>
 	<!-- ================ end banner area ================= -->
   
   <!--================Order Details Area =================-->
   <section class="order_details section-margin--small">
     <div class="container">
-      <p class="text-center billing-alert">Thank you. Your order has been received.</p>
+      <p class="text-center billing-alert">결제가 완료되었습니다. 주문해주셔서 감사합니다.</p>
       <div class="row mb-5">
       
       <!--------------------주문정보---------------------->
@@ -110,20 +135,20 @@
             <h3 class="billing-title">주문 정보</h3>
             <table class="order-rable">
               <tr>
-                <td>Order number</td>
+                <td>주문 번호</td>
                 <td>: 60235</td>
               </tr>
               <tr>
-                <td>Date</td>
-                <td>: Oct 03, 2017</td>
+                <td>주문일시</td>
+                <td>: 2020.10.09</td>
               </tr>
               <tr>
-                <td>Total</td>
-                <td>: USD 2210</td>
+                <td>가격</td>
+                <td>: </td>
               </tr>
               <tr>
-                <td>Payment method</td>
-                <td>: Check payments</td>
+                <td>지불 방법</td>
+                <td>: 카드결제</td>
               </tr>
             </table>
           </div>
@@ -132,23 +157,23 @@
         <!--------------------배송지 주소------------------>
         <div class="col-md-6 col-xl-4 mb-4 mb-xl-0">
           <div class="confirmation-card">
-            <h3 class="billing-title">Billing Address</h3>
+            <h3 class="billing-title">배송지 주소</h3>
             <table class="order-rable">
               <tr>
-                <td>Street</td>
-                <td>: 56/8 panthapath</td>
+                <td>지번</td>
+                <td>: <%=vo.getMember_addr() %></td>
               </tr>
-              <tr>
-                <td>City</td>
+             <!--  <tr>
+                <td>도시</td>
                 <td>: Dhaka</td>
               </tr>
               <tr>
-                <td>Country</td>
+                <td>국가</td>
                 <td>: Bangladesh</td>
-              </tr>
+              </tr> -->
               <tr>
-                <td>Postcode</td>
-                <td>: 1205</td>
+                <td>우편주소</td>
+                <td>: <%=vo.getMember_post() %></td>
               </tr>
             </table>
           </div>
