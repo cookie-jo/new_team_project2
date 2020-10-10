@@ -25,9 +25,9 @@ public class surveyDAO {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
-	         String db_url = "jdbc:oracle:thin:@smhrdai.cunegl97a26d.us-east-2.rds.amazonaws.com:1521:ORCL";
-	         String db_id = "smhrd";
-	         String db_pw = "aorwntkfkd1!";
+			String db_url = "jdbc:oracle:thin:@smhrdai.cunegl97a26d.us-east-2.rds.amazonaws.com:1521:ORCL";
+			String db_id = "smhrd";
+			String db_pw = "aorwntkfkd1!";
 
 			conn = DriverManager.getConnection(db_url, db_id, db_pw);
 

@@ -36,15 +36,14 @@ public class SurveyCon extends HttpServlet {
 			String hair = request.getParameter("hair");
 			String smoke = request.getParameter("smoke");
 			
-			
 			surveyDAO dao = new surveyDAO();
 			int cnt = dao.surveyInsert(name, gender, fatigue, con, insomnia, flu, inf, adult, diet, dig, stress, drunk, hair, smoke);
 			
 			if(cnt >0) {
 				System.out.println("성공이닷");
-				// request.setCharacterEncoding("UTF-8");
+				//request.setCharacterEncoding("UTF-8");
 				
-				ProcessBuilder builder = new ProcessBuilder("python","C:\\Users\\SM016\\Desktop\\new\\tea.py", name);
+				ProcessBuilder builder = new ProcessBuilder("python","C:\\Users\\SM107\\Desktop\\tea.py", name);
 				Process process = builder.start();
 				Scanner errorScanner = new Scanner(process.getErrorStream());
 				Scanner outputScanner = new Scanner(process.getInputStream());
