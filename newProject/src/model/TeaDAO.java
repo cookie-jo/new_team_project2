@@ -190,6 +190,7 @@ public class TeaDAO {
 					"and s.member_member_id = ?";
 			
 			psmt = conn.prepareStatement(sql);
+
 			psmt.setString(1, vo.getMember_id());
 			
 			rs = psmt.executeQuery();

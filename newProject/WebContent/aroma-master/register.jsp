@@ -24,77 +24,55 @@
    <%
       String name = (String) session.getAttribute("name");
    %>
-   <!--================ Start Header Menu Area =================-->
-   <header class="header_area">
-      <div class="main_menu">
-         <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container">
-               <a class="navbar-brand logo_h" href="index.jsp"><img
-                  src="img/logo.png" alt=""></a>
-               <button class="navbar-toggler" type="button" data-toggle="collapse"
-                  data-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent" aria-expanded="false"
-                  aria-label="Toggle navigation">
-                  <span class="icon-bar"></span> <span class="icon-bar"></span> <span
-                     class="icon-bar"></span>
-               </button>
-               <div class="collapse navbar-collapse offset"
-                  id="navbarSupportedContent">
-                  <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
-                     <li class="nav-item active"><a class="nav-link"
-                        href="index.html">홈</a></li>
-                     <li class="nav-item submenu dropdown"><a href="#"
-                        class="nav-link dropdown-toggle" data-toggle="dropdown"
-                        role="button" aria-haspopup="true" aria-expanded="false">상품페이지</a>
-                        <ul class="dropdown-menu">
-                           <li class="nav-item"><a class="nav-link"
-                              href="category.html">상품목록</a></li>
-                           <li class="nav-item"><a class="nav-link"
-                              href="single-product.html">상품상세페이지</a></li>
-                           <li class="nav-item"><a class="nav-link"
-                              href="checkout.html">주문하기</a></li>
-                           <li class="nav-item"><a class="nav-link"
-                              href="confirmation.html">주문확인서</a></li>
-                           <li class="nav-item"><a class="nav-link" href="cart.html">장바구니</a></li>
-                        </ul></li>
-                     <li class="nav-item submenu dropdown"><a href="#"
-                        class="nav-link dropdown-toggle" data-toggle="dropdown"
-                        role="button" aria-haspopup="true" aria-expanded="false">게시판</a>
-                        <ul class="dropdown-menu">
-                           <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                           <li class="nav-item"><a class="nav-link"
-                              href="single-blog.html">Blog Details</a></li>
-                        </ul></li>
-                     <li class="nav-item submenu dropdown"><a href="#"
-                        class="nav-link dropdown-toggle" data-toggle="dropdown"
-                        role="button" aria-haspopup="true" aria-expanded="false">예</a>
-                        <ul class="dropdown-menu">
-                           <%if(name != null){ %>
-                           <li class="nav-item"><a class="nav-link" href="../member_logout">로그아웃</a></li>
-                        <%}else{ %>
-                           <li class="nav-item"><a class="nav-link" href="login.jsp">로그인</a></li>
-                           <li class="nav-item"><a class="nav-link" href="register.jsp">회원가입</a></li>
-                        <%} %>
-                           <!-- <li class="nav-item"><a class="nav-link"
-                              href="tracking-order.jsp">Tracking</a></li> -->
-                        </ul></li>
-                     <li class="nav-item"><a class="nav-link" href="contact.html">고객센터</a></li>
-                  </ul>
+  <!--================ Start Header Menu Area =================-->
+	<header class="header_area">
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand logo_h" href="index.jsp"><img src="img/chanu_logo3.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+              <li class="nav-item active"><a class="nav-link" href="index.jsp" style="font-size: 18px;">홈</a></li>
+              <li class="nav-item"><a class="nav-link" href="category.jsp" style="font-size: 18px;"> 상품 목록</a></li>
 
-                  <ul class="nav-shop">
-                     <li class="nav-item"><button>
-                           <i class="ti-search"></i>
-                        </button></li>
-                     <li class="nav-item"><button>
-                           <i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span>
-                        </button></li>
-                     <!-- <li class="nav-item"><a class="button button-hero" href="login.html">로그인</a></li> -->
-                  </ul>
-               </div>
-            </div>
-         </nav>
-      </div>
-   </header>
+			  <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false" style="font-size: 18px;">마이페이지</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a class="nav-link" href="mypage.jsp">내 정보</a></li>
+                  <li class="nav-item"><a class="nav-link" href="./NewFile2.jsp">차누's Pick</a></li>
+                  <li class="nav-item"><a class="nav-link" href="cart.jsp">장바구니</a></li>
+
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="contact.html" style="font-size: 18px;">고객센터</a></li>
+            </ul>
+            <ul class="nav-shop">
+              <!-- <li>누구님 환영합니다.</li> -->
+              <%if(name != null){ %>
+                <%if(name != null){ %>
+                    <li><%=name %>님 환영합니다.</li>
+                <%}else{ %>
+                <%} %>
+                <li class="nav-item"><a class="button button-hero" href="../member_logout">로그아웃</a></li>
+              <%}else{ %>
+                <li class="nav-item"><a class="button button-hero" href="login.jsp">로그인</a></li>
+                <li class="nav-item"><a class="button button-hero" href="register.jsp">회원가입</a></li>
+              <%} %>
+              
+              <!-- <li class="nav-item"><a class="button button-hero" href="register.html">회원가입</a></li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
    <!--================ End Header Menu Area =================-->
 
    <main class="site-main">
@@ -158,7 +136,7 @@
                      <!--비밀번호 확인 text -> password 타입으로 수정 -->
                      <div class="col-md-12 form-group"> 
                         <input type="password" class="form-control" id="confirmPassword"   
-                           name="tel" placeholder="TEL" onfocus="this.placeholder = ''"
+                           name="confirmPassword" placeholder="confirmPassword" onfocus="this.placeholder = ''"
                            onblur="this.placeholder = 'Confirm Password'">
                      </div>
                      
@@ -181,7 +159,7 @@
                         <div class="col-md-12 form-group"></div>
                         <div class="col-md-12 form-group">
                            <button type="submit" value="submit"
-                              class="button button-register w-100">Register</button>
+                              class="button button-register w-100">회원가입</button>
                         </div>
                      </div>                     
                   </form>
