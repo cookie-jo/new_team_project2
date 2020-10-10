@@ -149,35 +149,60 @@ public class TeaDAO {
 		return list;
 	}
 	
-	
-	//차 추천서비스 할 때 사진 불러오는  함수 (만드는 중)
-	public ArrayList<TeaVO> teaJoin(int page) {
-		//1번 페이지 1~10
-		//2번 페이지 11~20
-		ArrayList<TeaVO> list = new ArrayList<TeaVO>();
+	//로그인한 회원정보를 DB에서 가져와서 티값을 꺼내옴
+	public MemberTeaVO getMemberTea(String id) {
+		conn();
+		MemberTeaVO vo = null;
+		try {
+			String sql = "select * from survey_result_1 where member_member_id = ?";
 
+			psmt = conn.prepareStatement(sql);
+			
+			psmt.setString(1, id);
+			rs = psmt.executeQuery();
+			while(rs.next()) {
+				String member_id = rs.getString(1);
+				int tea_id = rs.getInt(2);
+				vo = new MemberTeaVO(member_id, tea_id);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return vo;
+	}
+
+	
+	
+	//차 추천서비스 할 때 사진 불러오는  함수 (만드는 중) //Eunsoo 94  장포차 현재 이 질의문은 이렇게 뜸.
+	//select tea_name, tea_img from teas where tea_id = 55; 이렇게 뜨게 하려면 음.... 
+	public MemberTeaVO teaRecommend(MemberTeaVO vo) { 
+
+		MemberTeaVO info = null;
 		try {
 			conn();
 			// s.member_member_id & s.teas_tea_id  여기에 memberDAO 가져오기
-			String sql = "select m.member_id, t.tea_name from member m, teas t, survey_result_1 s "
-					+ "where m.member_id = ? and t.tea_id = ?;\r\n" + 
-					"";
+			String sql = "select s.member_member_id, m.member_name, s.teas_tea_id, t.tea_name, t.tea_img, t.tea_price, t.side_effect\r\n" + 
+					"from survey_result_1 s, member m, teas t\r\n" + 
+					"where s.member_member_id = m.member_id and s.teas_tea_id = t.tea_id\r\n" + 
+					"and s.member_member_id = ?";
+			
 			psmt = conn.prepareStatement(sql);
-			//psmt.setInt(1, startNum);
-			//psmt.setInt(2, endNum);
+			psmt.setString(1, vo.getMember_id());
+			
 			rs = psmt.executeQuery();
 			
-			while(rs.next()) {
-				int tea_id = rs.getInt(1);
-				String tea_name = rs.getString(2);
-				String tea_img = rs.getString(3);
-				String tea_price = rs.getString(4);
-				String tea_efficacy = rs.getString(5);
-				float score_average = rs.getFloat(6);
-				int score_count = rs.getInt(7);
-				String side_effect = rs.getString(8);
-				TeaVO vo = new TeaVO(tea_id, tea_name, tea_img, tea_price, tea_efficacy, score_average, score_count, side_effect);
-				list.add(vo);
+			if(rs.next()) {
+				String member_id = rs.getString(1);
+				String member_name = rs.getString(2);
+				int tea_id = rs.getInt(3);
+				String tea_name = rs.getString(4);
+				String tea_img = rs.getString(5);
+				String tea_price = rs.getString(6);
+				String side_effect = rs.getString(7);
+				info = new MemberTeaVO(member_id, member_name, tea_id, tea_name, tea_img, tea_price, side_effect);
 			}
 			
 		} catch (SQLException e) {
@@ -186,7 +211,7 @@ public class TeaDAO {
 		} finally {
 			close();
 		}
-		return list;
+		return info;
 	}
 	
 }

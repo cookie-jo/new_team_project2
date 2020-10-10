@@ -155,24 +155,26 @@
                            onfocus="this.placeholder = ''"
                            onblur="this.placeholder = 'Password'">
                      </div>
-                     <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" id="confirmPassword"
+                     <!--비밀번호 확인 text -> password 타입으로 수정 -->
+                     <div class="col-md-12 form-group"> 
+                        <input type="password" class="form-control" id="confirmPassword"   
                            name="tel" placeholder="TEL" onfocus="this.placeholder = ''"
                            onblur="this.placeholder = 'Confirm Password'">
                      </div>
-
+                     
+                     <!--주소 입력창 밖으로 튀어나와서 500px -> 355px로 수정 -->
                      <input type="button" onClick="goPopup()" value="주소검색" />
                      <div id="list"></div>
                      <div id="callBackDiv" class="forms_field">      
                         <div class="col-md-12 form-group">
-                           <input type="text" placeholder="Addr" style="width: 500px;"
+                           <input type="text" placeholder="Addr" style="width: 355px;"
                               id="roadFullAddr" name="addr" class="form-control" />
 
                         </div>
                         <div class="col-md-12 form-group">
 
                            <input type="text" placeholder="Post Number"
-                              style="width: 500px;" id="zipNo" name="post"
+                              style="width: 355px;" id="zipNo" name="post"
                               class="form-control" />
                         </div>
 
