@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
   <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
   
+  
 
   <link rel="stylesheet" href="css/style.css">
   
@@ -125,18 +126,24 @@
   <!-- Radio Button Module -->
   <p>1. 성별을 체크해주세요</p>
    <div id="rb-2" class="rb">
-  	남자  <pre><input type = "radio" name = "gender" value ="0">     </pre> 여자  <input type = "radio" name = "gender" value ="1">
+   	 남성 <input type = "radio" name = "gender" value = "0" style="width:20px;height:20px" ><pre>
+    </pre>여성 <input type = "radio" name = "gender" value = "1" style="width:20px;height:20px">
   </div>
   <br>
 
   <!-- Radio Button Module -->
   <p>2. 평소에 피곤함을 자주 느끼시나요?</p>
   <div id="rb-2" class="rb">
-    1 <input type = "radio" name = "fatigue" value = "0">    
-    2 <input type = "radio" name = "fatigue" value = "0">
-    3 <input type = "radio" name = "fatigue" value = "1">
-    4 <input type = "radio" name = "fatigue" value = "1">
-    5 <input type = "radio" name = "fatigue" value = "1">
+   	1 <input type = "radio" name = "fatigue" value = "0" style="width:20px;height:20px"><pre>
+    </pre>    
+    2 <input type = "radio" name = "fatigue" value = "0" style="width:20px;height:20px"><pre>
+    </pre>
+    3 <input type = "radio" name = "fatigue" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
+    4 <input type = "radio" name = "fatigue" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
+    5 <input type = "radio" name = "fatigue" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
      
   </div>
   <br>
@@ -144,11 +151,16 @@
   <!-- Radio Button Module -->
   <p>3. 평소에 집중력이 부족하신가요?</p>
   <div id="rb-3" class="rb">
-    1 <input type = "radio" name = "con" value = "0">    
-    2 <input type = "radio" name = "con" value = "0">
-    3 <input type = "radio" name = "con" value = "1">
-    4 <input type = "radio" name = "con" value = "1">
-    5 <input type = "radio" name = "con" value = "1">
+    1 <input type = "radio" name = "con" value = "0" style="width:20px;height:20px"><pre>
+    </pre>    
+    2 <input type = "radio" name = "con" value = "0" style="width:20px;height:20px"><pre>
+    </pre>
+    3 <input type = "radio" name = "con" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
+    4 <input type = "radio" name = "con" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
+    5 <input type = "radio" name = "con" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
     
   </div>
   <br>
@@ -156,106 +168,153 @@
   <!-- Radio Button Module -->
   <p>4. 평소에 불면증이 있으신가요?</p>
   <div id="rb-4" class="rb">
-    1 <input type = "radio" name = "insomnia" value = "0">    
-    2 <input type = "radio" name = "insomnia" value = "0">
- 	3 <input type = "radio" name = "insomnia" value = "1">
-    4 <input type = "radio" name = "insomnia" value = "1">
-    5 <input type = "radio" name = "insomnia" value = "1">
+    1 <input type = "radio" name = "insomnia" value = "0" style="width:20px;height:20px"><pre>
+    </pre>    
+    2 <input type = "radio" name = "insomnia" value = "0" style="width:20px;height:20px"><pre>
+    </pre>
+ 	3 <input type = "radio" name = "insomnia" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
+    4 <input type = "radio" name = "insomnia" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
+    5 <input type = "radio" name = "insomnia" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
   </div>
   <br>
 
   <!-- Radio Button Module -->
   <p>5. 평소에 면역력이 약하시거나 감기에 잘 걸리시나요?</p>
   <div id="rb-5" class="rb">
-    1 <input type = "radio" name = "flu" value = "0">    
-    2 <input type = "radio" name = "flu" value = "0">
- 	3 <input type = "radio" name = "flu" value = "1">
-    4 <input type = "radio" name = "flu" value = "1">
-    5 <input type = "radio" name = "flu" value = "1">
+    1 <input type = "radio" name = "flu" value = "0" style="width:20px;height:20px"><pre>
+    </pre>   
+    2 <input type = "radio" name = "flu" value = "0" style="width:20px;height:20px"><pre>
+    </pre>
+ 	3 <input type = "radio" name = "flu" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
+    4 <input type = "radio" name = "flu" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
+    5 <input type = "radio" name = "flu" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
   </div>
   <br>
 
   <!-- Radio Button Module -->
   <p>6. 평소 자주 붓거나 염증에 시달리시나요?</p>
   <div id="rb-6" class="rb">
-    1 <input type = "radio" name = "inf" value = "0">    
-    2 <input type = "radio" name = "inf" value = "0">
- 	3 <input type = "radio" name = "inf" value = "1">
-    4 <input type = "radio" name = "inf" value = "1">
-    5 <input type = "radio" name = "inf" value = "1">
+    1 <input type = "radio" name = "inf" value = "0" style="width:20px;height:20px"><pre>
+    </pre>    
+    2 <input type = "radio" name = "inf" value = "0" style="width:20px;height:20px"><pre>
+    </pre>
+ 	3 <input type = "radio" name = "inf" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
+    4 <input type = "radio" name = "inf" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
+    5 <input type = "radio" name = "inf" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
   </div>
   <br>
   
   <!-- Radio Button Module -->
   <p>7. 평소 고혈압, 당뇨 등의 성인병을 앓고 계신가요? </p>
   <div id="rb-7" class="rb">
-    1 <input type = "radio" name = "adult" value = "0">    
-    2 <input type = "radio" name = "adult" value = "0">
- 	3 <input type = "radio" name = "adult" value = "1">
-    4 <input type = "radio" name = "adult" value = "1">
-    5 <input type = "radio" name = "adult" value = "1">
+    1 <input type = "radio" name = "adult" value = "0" style="width:20px;height:20px"><pre>
+    </pre>    
+    2 <input type = "radio" name = "adult" value = "0" style="width:20px;height:20px"><pre>
+    </pre>
+ 	3 <input type = "radio" name = "adult" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
+    4 <input type = "radio" name = "adult" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
+    5 <input type = "radio" name = "adult" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
   </div>
   <br>
   
     <!-- Radio Button Module -->
   <p>8. 현재 다이어트를 하고 계시거나 할 예정이신가요?</p>
   <div id="rb-8" class="rb">
-    1 <input type = "radio" name = "diet" value = "0">    
-    2 <input type = "radio" name = "diet" value = "0">
- 	3 <input type = "radio" name = "diet" value = "1">
-    4 <input type = "radio" name = "diet" value = "1">
-    5 <input type = "radio" name = "diet" value = "1">
+    1 <input type = "radio" name = "diet" value = "0" style="width:20px;height:20px"><pre>
+    </pre>    
+    2 <input type = "radio" name = "diet" value = "0" style="width:20px;height:20px"><pre>
+    </pre>
+ 	3 <input type = "radio" name = "diet" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
+    4 <input type = "radio" name = "diet" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
+    5 <input type = "radio" name = "diet" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
   </div>
   <br>
   
     <!-- Radio Button Module -->
   <p>9. 평소 소화기능이 약하시거나 변비를 앓고 계신가요? </p>
   <div id="rb-9" class="rb">
-    1 <input type = "radio" name = "dig" value = "0">    
-    2 <input type = "radio" name = "dig" value = "0">
- 	3 <input type = "radio" name = "dig" value = "1">
-    4 <input type = "radio" name = "dig" value = "1">
-    5 <input type = "radio" name = "dig" value = "1">
+    1 <input type = "radio" name = "dig" value = "0" style="width:20px;height:20px"><pre>
+    </pre>    
+    2 <input type = "radio" name = "dig" value = "0" style="width:20px;height:20px"><pre>
+    </pre>
+ 	3 <input type = "radio" name = "dig" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
+    4 <input type = "radio" name = "dig" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
+    5 <input type = "radio" name = "dig" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
   </div>
   <br>
   
     <!-- Radio Button Module -->
   <p>10. 평소에 스트레스가 많으신가요? </p>
   <div id="rb-10" class="rb">
-    1 <input type = "radio" name = "stress" value = "0">    
-    2 <input type = "radio" name = "stress" value = "0">
- 	3 <input type = "radio" name = "stress" value = "1">
-    4 <input type = "radio" name = "stress" value = "1">
-    5 <input type = "radio" name = "stress" value = "1">
+    1 <input type = "radio" name = "stress" value = "0" style="width:20px;height:20px"><pre>
+    </pre>   
+    2 <input type = "radio" name = "stress" value = "0" style="width:20px;height:20px"><pre>
+    </pre>
+ 	3 <input type = "radio" name = "stress" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
+    4 <input type = "radio" name = "stress" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
+    5 <input type = "radio" name = "stress" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
   </div>
   <br>
   
     <!-- Radio Button Module -->
   <p>11. 평소에 음주를 자주 하시나요?</p>
   <div id="rb-11" class="rb">
-    1 <input type = "radio" name = "drunk" value = "0">    
-    2 <input type = "radio" name = "drunk" value = "0">
- 	3 <input type = "radio" name = "drunk" value = "1">
-    4 <input type = "radio" name = "drunk" value = "1">
-    5 <input type = "radio" name = "drunk" value = "1">
+    1 <input type = "radio" name = "drunk" value = "0" style="width:20px;height:20px"><pre>
+    </pre>   
+    2 <input type = "radio" name = "drunk" value = "0" style="width:20px;height:20px"><pre>
+    </pre>
+ 	3 <input type = "radio" name = "drunk" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
+    4 <input type = "radio" name = "drunk" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
+    5 <input type = "radio" name = "drunk" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
   </div>
   <br>
   
     <!-- Radio Button Module -->
   <p>12. 탈모가 있으신가요?</p>
   <div id="rb-12" class="rb">
-    1 <input type = "radio" name = "hair" value = "0">    
-    2 <input type = "radio" name = "hair" value = "0">
- 	3 <input type = "radio" name = "hair" value = "1">
-    4 <input type = "radio" name = "hair" value = "1">
-    5 <input type = "radio" name = "hair" value = "1">
+    1 <input type = "radio" name = "hair" value = "0" style="width:20px;height:20px"><pre>
+    </pre>>   
+    2 <input type = "radio" name = "hair" value = "0" style="width:20px;height:20px"><pre>
+    </pre>
+ 	3 <input type = "radio" name = "hair" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
+    4 <input type = "radio" name = "hair" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
+    5 <input type = "radio" name = "hair" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
   </div>
   
     <!-- Radio Button Module -->
   <p>13. 흡연자이신가요?</p>
   <div id="rb-13" class="rb">
-    1 <input type = "radio" name = "smoke" value = "0">    
-    2 <input type = "radio" name = "smoke" value = "1">
+    1 <input type = "radio" name = "smoke" value = "0" style="width:20px;height:20px"><pre>
+    </pre>    
+    2 <input type = "radio" name = "smoke" value = "1" style="width:20px;height:20px"><pre>
+    </pre>
  </div>
 <script>
  $(document).ready(function(){
@@ -268,13 +327,7 @@
 	});
 });
  </script>
-<%--  <%
- 	request.setCharacterEncoding("UTF-8");
- 	String id = (String)session.getId();
-	surveyDAO dao = new surveyDAO();
-	ArrayList<surveyVO> vo = dao.surveyInsert();
-	
- %> --%>
+
   <!-- Button -->
   <div class="button-box radio-button">
 
@@ -396,6 +449,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <script src="vendors/mail-script.js"></script>
   <script src="js/main.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
 
 </body>
 </html>

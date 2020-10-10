@@ -42,7 +42,7 @@ public class SurveyCon extends HttpServlet {
 			
 			if(cnt >0) {
 				System.out.println("성공이닷");
-				request.setCharacterEncoding("UTF-8");
+				// request.setCharacterEncoding("UTF-8");
 				
 				ProcessBuilder builder = new ProcessBuilder("python","C:\\Users\\SM016\\Desktop\\new\\tea.py", name);
 				Process process = builder.start();

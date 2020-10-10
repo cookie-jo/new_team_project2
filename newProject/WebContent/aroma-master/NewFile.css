@@ -27,6 +27,7 @@ html, body {
   text-align: center;
   background: rgba(255,255,255,.03);
   border-radius: 3em;
+  padding-right: 20px;
 }
 
 .rb-tab {
@@ -37,10 +38,9 @@ html, body {
 
 .rb-txt {
   position: absolute;
-  top: 50%;
-  left: 50%;
+
   transform: translate(-50%, -50%);
-  font-size: 1.5em;
+  font-size: 2.5em;
 
 }
 
@@ -48,7 +48,7 @@ html, body {
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
@@ -75,7 +75,7 @@ html, body {
   margin-top: 1em;
   padding: 1em;
   max-width: 220px;
-  font-size: 1.5em;
+  font-size: 2.5em;
   color: #D42D78;
   text-transform: uppercase;
   text-decoration: none;
