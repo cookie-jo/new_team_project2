@@ -24,8 +24,6 @@ String name = (String) session.getAttribute("name");
 
 %>
 
-
-
   <!--================ Start Header Menu Area =================-->
 	<header class="header_area">
     <div class="main_menu">
@@ -48,17 +46,14 @@ String name = (String) session.getAttribute("name");
                   aria-expanded="false" style="font-size: 18px;">마이페이지</a>
                 <ul class="dropdown-menu">
                   <li class="nav-item"><a class="nav-link" href="mypage.jsp">내 정보</a></li>
-                  <li class="nav-item"><a class="nav-link" href="survey.jsp">차누's Pick</a></li>
+                  <li class="nav-item"><a class="nav-link" href="./NewFile2.jsp">차누's Pick</a></li>
                   <li class="nav-item"><a class="nav-link" href="cart.jsp">장바구니</a></li>
 
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="contact.html" style="font-size: 18px;">고객센터</a></li>
             </ul>
-
             <ul class="nav-shop">
-
-              
               <!-- <li>누구님 환영합니다.</li> -->
               <%if(name != null){ %>
                 <%if(name != null){ %>
@@ -99,7 +94,7 @@ String name = (String) session.getAttribute("name");
               <h5>차를 접하는 이유를 어렵게 생각한게 아닐까요? 
                 <br>
                 <br>
-                간단한 질문을 통해 당신만의 차를 추천해드립니다! </h5>
+              	  간단한 질문을 통해 당신만의 차를 추천해드립니다! </h5>
                 <br>
               <a class="button button-hero" href="./NewFile2.jsp">차누's Pick</a>
             </div>
