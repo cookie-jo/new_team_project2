@@ -4,32 +4,33 @@
 성분데이터를 활용한 맞춤형 차(茶) 추천서비스
 <br>
 120여 종류의 차(茶) 상품을 판매하는 쇼핑몰 + 추천서비스
-<br>
+<br><br>
 
 
 ## Technical Specification
 ![2차팀프로젝트 기술스택](https://user-images.githubusercontent.com/67885590/101494285-7845dc80-39aa-11eb-89f4-c9b2014ab7d0.PNG)
-
+<br>
 
 
 ## Required Library
 - ojdbc6.jar
-
+<br>
 
 ## Requirements Specification
-회원 가입
+- 회원 가입
 
-로그인, 로그아웃, 탈퇴
+- 로그인, 로그아웃, 탈퇴
 
-상품목록, 상품상세
+- 상품목록, 상품상세
 
-장바구니, 주문배송, 결제
+- 장바구니, 주문배송, 결제
 
-리뷰기능
+- 리뷰기능
 
 
 ## Database Modeling
-image
+![2차 ERD](https://user-images.githubusercontent.com/67885590/101495689-2aca6f00-39ac-11eb-81ae-c3f72170cc60.PNG)
+<br>
 
 
 ## 주요 기능 설명
