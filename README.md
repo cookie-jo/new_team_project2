@@ -1,19 +1,19 @@
-## JSP&Servlet MVC(model2) 쇼핑몰 + 차(茶) 추천서비스 구현
+# JSP&Servlet MVC(model2) 쇼핑몰 + 차(茶) 추천서비스 구현
 
-### Introduction
+## Introduction
 19F/W 아우터 제품들을 구매할 수 있는 20~30대 여성을 대상으로 하는 의류 쇼핑몰 제작
 
 
-### Technical Specification
+## Technical Specification
 image
 
 
-### Required Library
+## Required Library
 
 - ojdbc6.jar
 
 
-### Requirements Specification
+## Requirements Specification
 회원 가입
 
 로그인, 로그아웃, 탈퇴
@@ -29,11 +29,11 @@ image
 게시글 편집 기능
 
 
-### Database Modeling
+## Database Modeling
 image
 
 
-### 주요 기능 설명
+## 주요 기능 설명
 사이트 메인화면
 image
 
