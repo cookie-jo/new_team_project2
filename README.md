@@ -21,12 +21,11 @@
 
 - 로그인, 로그아웃, 탈퇴
 
-- 상품목록, 상품상세
+- 상품목록, 상품상세, 리뷰
 
 - 장바구니, 주문배송, 결제
 
-- 리뷰기능
-
+- 설문조사, 설문조사결과
 
 ## Database Modeling
 ![2차 ERD](https://user-images.githubusercontent.com/67885590/101495689-2aca6f00-39ac-11eb-81ae-c3f72170cc60.PNG)
