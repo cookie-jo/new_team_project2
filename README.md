@@ -1,11 +1,14 @@
 # JSP&Servlet MVC(model2) 쇼핑몰 + 차(茶) 추천서비스 구현
 
 ## Introduction
-19F/W 아우터 제품들을 구매할 수 있는 20~30대 여성을 대상으로 하는 의류 쇼핑몰 제작
+성분데이터를 활용한 맞춤형 차(茶) 추천서비스
+120여 종류의 차(茶) 상품을 판매하는 쇼핑몰 + 추천서비스
+
 
 
 ## Technical Specification
-image
+![2차팀프로젝트 기술스택](https://user-images.githubusercontent.com/67885590/101494285-7845dc80-39aa-11eb-89f4-c9b2014ab7d0.PNG)
+
 
 
 ## Required Library
