@@ -34,7 +34,7 @@
 
 
 ## 주요 기능 설명
-**사이트 메인화면**
+### **사이트 메인화면**
 <br>
 ![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/67885590/101592851-4415fe80-3a32-11eb-9784-8183dbdd1e0b.gif)
 <br>
