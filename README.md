@@ -80,19 +80,37 @@
 <br>
 
 ### *** 설문조사 (주요기능: 콘텐츠기반 필터링)***
+<br>
 
+![ezgif com-gif-maker (7)survey](https://user-images.githubusercontent.com/67885590/101596160-f603f980-3a37-11eb-959c-c4872ad68c55.gif)
 
+<br>
 
+> 설문조사 결과를 오라클DB에 저장하고 그 값을 자바의 ProcessBuilder를 사용하여 파이썬으로 넘긴 후 코사인유사도에 따라서 나열된 결과값을 다시 오라클DB에 저장하게됩니다.
+
+<br>
 
 ### ***상품 상세 조회***
-image
+<br>
+
+![ezgif com-gif-maker (4)review](https://user-images.githubusercontent.com/67885590/101596226-0d42e700-3a38-11eb-86f1-50ce3cca005a.gif)
+
+<br>
 
 > 제품 상세조회 페이지에서는 제품에 대한 이미지와 해당 제품에 달린 리뷰를 작성할 수 있습니다.
 
+<br>
 
+### ***장바구니에 담기, 결제, myPage 확인***
+<br>
 
-### ***장바구니를 통한 구매***
-image
+![ezgif com-gif-maker (5)detail_mypage](https://user-images.githubusercontent.com/67885590/101596275-1fbd2080-3a38-11eb-825b-26ac2be1cf76.gif)
 
-장바구니 페이지에서는 상품의 수량을 변경하거나 장바구니에서 아이템을 삭제할 수 있습니다.  
+<br>
 
+> 장바구니의 경우 뒤로가기를 해도 원래대로 있어야 하기 때문에 Session을 사용하였습니다. 이때 발생한 문제점은 다른 아이디로 로그인해도 상품이 그대로 담겨있었습니다.
+> 정석대로 하려면 Cookie를 사용하고 DB테이블을 만들어서 값을 담았어야 했습니다. (늦은 깨달음)
+> 결제는 KCP인증 및 사업자 등록을 해야하는 문제가 있어 지금은 할 수 가 없어서 형식만 만들었습니다.
+> 설문조사를 하게 되면 내가 추천받은 차를 myPage에서 확인을 할 수 있습니다.
+
+<br>
