@@ -1,4 +1,4 @@
-# JSP&Servlet MVC(model2) 쇼핑몰 + 차(茶) 추천서비스 구현
+# JSP&Servlet MVC(model2) 쇼핑몰 + 차(茶) 추천서비스
 
 ## Introduction
 성분데이터를 활용한 맞춤형 차(茶) 추천서비스
@@ -40,15 +40,14 @@ image
 
 
 
-***로그인
-image image
-
 
 ***회원가입
 image
-
 회원가입은 우편번호 api를 사용해 주소를 입력받을 수 있게 하였습니다.
 
+
+***로그인
+image image
 
 
 ***상품 목록 조회
