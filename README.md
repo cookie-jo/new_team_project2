@@ -42,7 +42,8 @@ image
 
 
 ***회원가입
-image
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/67885590/101591440-e680b280-3a2f-11eb-911b-364eb7e7de26.gif)
+
 회원가입은 우편번호 api를 사용해 주소를 입력받을 수 있게 하였습니다.
 
 
