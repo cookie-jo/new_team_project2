@@ -104,7 +104,7 @@
 ### ***장바구니에 담기, 결제***
 <br>
 
-1
+![ezgif com-gif-maker (5)detail](https://user-images.githubusercontent.com/67885590/101599816-bcce8800-3a3d-11eb-946f-01c343738011.gif)
 
 <br>
 
@@ -115,7 +115,7 @@
 ### ***마이페이지 확인***
 <br>
 
-1
+![ezgif com-gif-maker (7)mypage](https://user-images.githubusercontent.com/67885590/101599839-c526c300-3a3d-11eb-9bac-c28fd807c6ea.gif)
 
 <br>
 
