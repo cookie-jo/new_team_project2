@@ -34,16 +34,17 @@
 
 ## 주요 기능 설명
 사이트 메인화면
-image
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/67885590/101591440-e680b280-3a2f-11eb-911b-364eb7e7de26.gif)
 
-메인화면에서는 가장 최근에 등록된 상품과 가장 판매량이 높은 상품을 확인할 수 있습니다.
-
+<br>
+메인화면은 주요기능인 차(茶)추천서비스를 이용할 수 있도록 배치하였고, 일반상품, 구독서비스(수익구조), 고급상품, 회사 팀소개 순으로 나열하였습니다.
 
 
 
 ***회원가입
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/67885590/101591440-e680b280-3a2f-11eb-911b-364eb7e7de26.gif)
 
+
+<br>
 회원가입은 우편번호 api를 사용해 주소를 입력받을 수 있게 하였습니다.
 
 
